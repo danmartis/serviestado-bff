@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "bff empresas",
   "artifactType": "bff",
-  "generator-bech": "0.1.6",
   "main": "src/index.js",
   "scripts": {
     "test": "nyc mocha test/pruebasUnitarias/*.spec.js",
@@ -17,7 +16,6 @@
   "dependencies": {
     "express": "~4.16.4",
     "helmet": "~3.15.0",
-    "logger-bech": "~1.2.1",
     "express-async-errors": "~3.1.1"
   },
   "devDependencies": {
