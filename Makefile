@@ -1,4 +1,14 @@
-run: 
+run:
 	npm start
-install:
-	npm install
+
+run-dev:
+	npm run dev
+
+unit-test:
+	npm run --silent test
+
+contract:
+	npm run contrato
+
+performance:
+	npm run performance

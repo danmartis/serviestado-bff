@@ -1,25 +1,65 @@
 {
-  "name": "api-se-pp",
+  "name": "se-bff-empresas",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "bff empresas",
+  "artifactType": "bff",
+  "generator-bech": "0.1.6",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo SUCCESS",
-    "dev": "nodemon index.js"
+    "test": "nyc mocha test/pruebasUnitarias/*.spec.js",
+    "start": "node src/index.js",
+    "local": "(. ./tools/variables_entorno.sh && node src/index.js)",
+    "debug": "node --inspect src/index.js",
+    "unitTesting": "nyc ava \"test/pruebasUnitarias/*.spec.js\" | sed s/tests\\ passed/passing/g | sed s/tests\\ failed/failing/g"
   },
-  "author": "",
+  "author": "celulas empresas <celulas empresas>",
+  "license": "UNLICENSED",
   "dependencies": {
-    "cors": "^2.8.4",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.19.1",
-    "express": "^4.17.1",
-    "morgan": "^1.9.0",
-    "swagger-ui-dist": "^3.23.10",
-    "tslint-sonarts": "^1.9.0"
+    "express": "~4.16.4",
+    "helmet": "~3.15.0",
+    "logger-bech": "~1.2.1",
+    "express-async-errors": "~3.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "ava": "^2.2.0",
+    "nyc": "^14.1.1",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-config-xo": "^0.25.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4",
+    "proxyquire": "~2.0.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 90,
+    "statements": 90,
+    "branches": 90,
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "exclude": [
+      "test/pruebasUnitarias/*.spec.js"
+    ],
+    "report-dir": "./coverage"
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
   }
 }
