@@ -11,4 +11,8 @@ artifacts:
   files:
     - '**/*'
   base-directory: ''
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> eb101dbfe61753fa9a44259db4d8d89d080c1f05

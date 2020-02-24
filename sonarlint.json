@@ -1,4 +1,4 @@
-{
-    "serverId" : "externalServer", 
-    "projectKey" : "bff-se-pp"
-  } 
+  {
+    "serverId" : "externalServer",
+    "projectKey" : "microservicios-se-bff-empresas"
+  }
