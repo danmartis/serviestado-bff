@@ -5,7 +5,7 @@ require("express-async-errors");
 const helmet = require("helmet");
 const { routes } = require("./routes/routes");
 const bodyParser = require("body-parser");
-const logger = require("logger-bech").loggerBECH;
+
 const config = require("./config/config");
 
 const app = express();

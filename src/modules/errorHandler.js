@@ -1,4 +1,4 @@
-const loggerBECH = require("logger-bech").loggerBECH;
+//const loggerBECH = require("logger-bech").loggerBECH;
 
 /**
  * Middleware para manejo de excepciones dentro de controladores
@@ -9,7 +9,7 @@ const loggerBECH = require("logger-bech").loggerBECH;
  * @returns {Promise<void>}
  */
 async function errorHandler(err, req, res, next) {
-  loggerBECH.error(err.message);
+  console.error(err.message);
 
   if (!err.statusCode) err.statusCode = 500;
 

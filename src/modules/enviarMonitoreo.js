@@ -1,5 +1,4 @@
 //const monitoreoBECH = require("monitoreo-bech").monitoreoBECH;
-const loggerBECH = require("logger-bech").loggerBECH;
 
 /**
  *  Envío de logs a monitoreo funcional (kafka)
@@ -55,10 +54,10 @@ function enviarLog(
 
   monitoreoBECH(request, resp)
     .then(() => {
-      loggerBECH.debug("Log monitoreoBECH enviado");
+      console.debug("Log monitoreoBECH enviado");
     })
     .catch(err => {
-      loggerBECH.error(
+      console.error(
         "Error en envío de log monitoreoBECH:\n" + JSON.stringify(err)
       );
     });
