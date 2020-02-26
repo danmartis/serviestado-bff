@@ -9,7 +9,7 @@ const config = require("./config/config");
 
 const errorHandler = require("./app/modules/error-handler");
 
-//Para desarrollo
+//Para desarrollo, muestra todas los endpoint del router
 const listEndpoints = require('express-list-endpoints')
 
 const app = express();
