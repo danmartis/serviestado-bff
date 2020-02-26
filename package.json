@@ -31,7 +31,8 @@
     "nodemon": "^2.0.2",
     "nyc": "^14.1.1",
     "prettier": "^1.16.4",
-    "proxyquire": "~2.0.1"
+    "proxyquire": "~2.0.1",
+    "express-list-endpoints": "^4.0.1"
   },
   "nyc": {
     "check-coverage": true,

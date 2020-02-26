@@ -1,22 +1,17 @@
 // Declara variables
+const express = require('express')
+const router = express.Router();
+
 const base = process.env.NODE_ENV || "/bff/v1/se-bff-empresas";
 
-const {controllerGestorContenido} = require("../../app/controllers/v1/gestor-contenido.controller");
-const {healthcheck} = require("../../app/controllers/v1/healthcheck.controller");
-const errorHandler = require("../../app/modules/error-handler");
-const paises = require('./ejemplo-paises.routes');
+const gestorContenidosRoutes = require('./gestorContenido.routes');
+const healthcheckRoutes = require('./healthcheck.routes');
+const paisesRoutes = require('./ejemplo-paises.routes');
 
-const routes = app => {
-  app.get(base + "/controllerGestorContenido", controllerGestorContenido);
+router.use('/gestorContenido', gestorContenidosRoutes );
+router.use('/healthcheck', healthcheckRoutes);
+router.use('/paises', paisesRoutes);
 
-  // Operación de healthcheck
-  app.get("/healthcheck", healthcheck);
-
-  // Middleware para manejo de errores
-  app.use(errorHandler);
-
-  // Ejemplo Paises
-  app.use(base, paises);
-};
-
-module.exports = routes;
+module.exports = (app) => {
+    app.use(base, router);
+}
