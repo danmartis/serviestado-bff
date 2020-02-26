@@ -23,22 +23,22 @@ const ResStub = function() {
 
 beforeEach(function() {
   controllerGestorContenidoCtl = proxyquire(
-    "../../src/controllers/controllerGestorContenido.controller",
+    "../../src/app/controllers/v1/gestor-contenido.controller",
     {
       /*"../modules/enviarMonitoreo": {
         enviarLog: function() {}
       },*/
 
-      "../config/config": {
+      /*"../config/config": {
         redis: {
           expiration: "300"
         }
-      }
+      }*/
     }
   );
 });
 
-describe("opc1", function() {
+describe("controllerGestorContenido", function() {
   it("should return OK", async function() {
     let req = {
       headers: {
@@ -48,5 +48,12 @@ describe("opc1", function() {
     let res = new ResStub();
     await controllerGestorContenidoCtl.controllerGestorContenido(req, res);
     assert(res.statusCode === 200);
+  });
+
+  it("should return NOK", async function() {
+    let req = {};
+    let res = new ResStub();
+    await controllerGestorContenidoCtl.controllerGestorContenido(req, res);
+    (res.statusCode === 500);
   });
 });

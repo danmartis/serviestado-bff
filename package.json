@@ -5,11 +5,11 @@
   "artifactType": "bff",
   "main": "src/index.js",
   "scripts": {
-    "test": "nyc mocha test/pruebasUnitarias/*.spec.js",
+    "test": "nyc mocha tests/unit/*.spec.js",
     "start": "node src/index.js",
     "local": "(. ./tools/variables_entorno.sh && node src/index.js)",
     "debug": "node --inspect src/index.js",
-    "unitTesting": "nyc ava \"test/pruebasUnitarias/*.spec.js\" | sed s/tests\\ passed/passing/g | sed s/tests\\ failed/failing/g",
+    "unitTesting": "nyc ava \"tests/unit/*.spec.js\" | sed s/tests\\ passed/passing/g | sed s/tests\\ failed/failing/g",
     "dev": "nodemon src/index.js"
   },
   "author": "celulas empresas <celulas empresas>",
