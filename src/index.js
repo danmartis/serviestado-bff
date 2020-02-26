@@ -3,7 +3,7 @@
 const express = require("express");
 require("express-async-errors");
 const helmet = require("helmet");
-const { routes } = require("./routes/routes");
+const routes = require("./routes/v1");
 const bodyParser = require("body-parser");
 
 const config = require("./config/config");
@@ -21,12 +21,12 @@ async function serverStart() {
 
   let port = config.microservicios.port;
   app.listen(port, () => {
-    logger.info("Servidor ejecutandose en el puerto: " + port);
+    console.log("Servidor ejecutandose en el puerto: " + port);
   });
 }
 
 async function cleanup() {
-  logger.info("Desconectando...");
+  console.log("Desconectando...");
 
   process.exit(0);
 }
