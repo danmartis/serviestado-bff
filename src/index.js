@@ -3,14 +3,14 @@
 const express = require("express");
 require("express-async-errors");
 const helmet = require("helmet");
-const routes = require("./routes/v1");
+const routes = require("./routes");
 
 const config = require("./config/config");
 
 const errorHandler = require("./app/modules/error-handler");
 
-//Para desarrollo, muestra todas los endpoint del router
-const listEndpoints = require('express-list-endpoints')
+// Para desarrollo, muestra todas los endpoint del router
+const listEndpoints = require("express-list-endpoints");
 
 const app = express();
 
