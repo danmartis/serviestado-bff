@@ -3,3 +3,4 @@ public/node_modules/*
 settings.json
 scripts/
 .npmrc
+.nyc_output
