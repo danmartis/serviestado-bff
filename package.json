@@ -12,12 +12,13 @@
     "unitTesting": "nyc ava \"tests/unit/*.spec.js\" | sed s/tests\\ passed/passing/g | sed s/tests\\ failed/failing/g",
     "dev": "nodemon src/index.js",
     "lint": "eslint ./",
-	  "lint:fix": "eslint ./ --fix"
+    "lint:fix": "eslint ./ --fix"
   },
   "author": "celulas empresas <celulas empresas>",
   "license": "UNLICENSED",
   "dependencies": {
     "axios": "^0.19.2",
+    "eslint-config-airbnb": "^18.0.1",
     "express": "~4.16.4",
     "express-async-errors": "~3.1.1",
     "helmet": "~3.15.0"
