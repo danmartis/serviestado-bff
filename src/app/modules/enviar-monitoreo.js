@@ -63,4 +63,4 @@ function enviarLog(
     });
 }
 
-module.exports = { enviarLog };
+export default { enviarLog };

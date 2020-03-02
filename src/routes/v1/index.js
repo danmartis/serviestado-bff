@@ -1,14 +1,13 @@
 // Declara variables
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
+const router = Router();
 
-
-const gestorContenidosRoutes = require("./gestorContenido.routes");
-const healthcheckRoutes = require("./healthcheck.routes");
-const paisesRoutes = require("./ejemplo-paises.routes");
+import gestorContenidosRoutes from "./gestorContenido.routes";
+import healthcheckRoutes from "./healthcheck.routes";
+import paisesRoutes from "./ejemplo-paises.routes";
 
 router.use("/gestorContenido", gestorContenidosRoutes);
 router.use("/healthcheck", healthcheckRoutes);
 router.use("/paises", paisesRoutes);
 
-module.exports = router;
+export default router;

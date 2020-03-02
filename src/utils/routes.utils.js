@@ -7,4 +7,4 @@ const parseRoutes = (routes) => {
     }
 }
 
-module.exports = { parseRoutes }
+export default { parseRoutes }

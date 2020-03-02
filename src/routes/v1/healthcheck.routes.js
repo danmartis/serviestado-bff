@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
-const healthcheckController = require('../../app/controllers/v1/healthcheck.controller');
+import { healthcheck } from '../../app/controllers/v1/healthcheck.controller';
 
-router.get('', healthcheckController.healthcheck);
+router.get('', healthcheck);
 
-module.exports = router;
+export default router;

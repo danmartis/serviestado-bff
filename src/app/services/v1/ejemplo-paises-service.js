@@ -1,9 +1,5 @@
-const axios = require("axios");
+import axios from "axios";
 
-const getApi = url => {
+export const getApi = url => {
   return axios.get(url);
-};
-
-module.exports = {
-  getApi
 };

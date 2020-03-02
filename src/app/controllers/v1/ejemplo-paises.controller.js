@@ -1,8 +1,7 @@
-const paises = require("../../services/v1/ejemplo-paises-service");
+import { getApi } from "../../services/v1/ejemplo-paises-service";
 
-const getPaises = (req, res) => {
-  paises
-    .getApi("https://dog.ceo/api/breeds/list/all")
+export const getPaises = (req, res) => {
+  getApi("https://dog.ceo/api/breeds/list/all")
     .then(data => {
         // console.log(data.data)
       res.json({
@@ -16,8 +15,4 @@ const getPaises = (req, res) => {
         error: err.message
       });
     });
-};
-
-module.exports = {
-  getPaises
 };

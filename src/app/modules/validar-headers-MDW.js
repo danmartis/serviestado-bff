@@ -21,4 +21,4 @@ async function validarHeaders(req, res, next) {
   }
   next();
 }
-module.exports = validarHeaders;
+export default validarHeaders;

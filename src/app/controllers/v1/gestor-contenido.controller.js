@@ -1,8 +1,6 @@
-//const enviarLog = require("../modules/enviarMonitoreo").enviarLog;
-const config = require("../../../config/config");
-const textos = require("../../mensajes/textos");
+import textos from "../../mensajes/textos";
 
-const controllerGestorContenido = (req, res) => {
+export const controllerGestorContenido = (req, res) => {
   try {
     return res.status(200).send(textos);
   } catch (error) {
@@ -11,4 +9,3 @@ const controllerGestorContenido = (req, res) => {
   }
 }
 
-module.exports = { controllerGestorContenido };

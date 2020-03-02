@@ -1,7 +1,7 @@
-const express = require("express");
-const paisController = require("../../app/controllers/v1/ejemplo-paises.cotntroller");
-const router = express.Router();
+import { Router } from "express";
+import { getPaises } from "../../app/controllers/v1/ejemplo-paises.controller";
+const router = Router();
 
-router.get("", paisController.getPaises);
+router.get("", getPaises);
 
-module.exports = router;
+export default router;

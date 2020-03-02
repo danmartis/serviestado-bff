@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
-const gestorContenidoController = require('../../app/controllers/v1/gestor-contenido.controller');
+import { controllerGestorContenido } from '../../app/controllers/v1/gestor-contenido.controller';
 
-router.get('', gestorContenidoController.controllerGestorContenido)
+router.get('', controllerGestorContenido)
 
-module.exports = router;
+export default router;
