@@ -1,77 +1,82 @@
-[
-    {
-        "group": "GENERICO",
-        "key": "LABEL_MENUMAS_BTN_ACEPTAR",
-        "value": "Aceptar"
-    },
-    {
-        "group": "GENERICO",
-        "key": "LABEL_MENUMAS_BTN_CONTACTO-LOGIN",
-        "value": "Llama al 600 200 7000"
-    },
-    {
-        "group": "LANDING_EMPRESA",
-        "key": "EMPRESA_LANDING1_1",
-        "value": "Haz que tus clientes paguen en un sólo lugar."
-    },
-    {
-        "group": "LANDING_EMPRESA",
-        "key": "EMPRESA_LANDING1_2",
-        "value": "Si eres PYME o Empresa, en "
-    },
-    {
-        "group": "LANDING_EMPRESA",
-        "key": "EMPRESA_LANDING1_3_STRONG",
-        "value": "ServiEstado "
-    },
-    {
-        "group": "LANDING_EMPRESA",
-        "key": "EMPRESA_LANDING1_4",
-        "value": "te ofrecemos un convenio de recaudación "
-    },
-    {
-        "group": "LANDING_EMPRESA",
-        "key": "EMPRESA_LANDING1_5_STRONG",
-        "value": "a tu medida. "
-    },
-    {
-        "group": "HEADER_EMPRESA",
-        "key": "HEADER_EMPRESA_1",
-        "value": "Inicio"
-    },
-    {
-        "group": "HEADER_EMPRESA",
-        "key": "HEADER_EMPRESA_2",
-        "value": "Quienes Somos"
-    },
-    {
-        "group": "HEADER_EMPRESA",
-        "key": "HEADER_EMPRESA_3",
-        "value": "Ayuda"
-    },
-    {
-        "group": "HEADER_EMPRESA",
-        "key": "HEADER_EMPRESA_3",
-        "value": "Ingresar"
-    },
-    {
-        "group": "FOOTER_GENERICO",
-        "key": "EMPRESA_FOOTER_1",
-        "value": "¿ Quieres contactarte con nosotros?"
-    },
-    {
-        "group": "FOOTER_GENERICO",
-        "key": "EMPRESA_FOOTER_2",
-        "value": "LLámanos"
-    },
-    {
-        "group": "FOOTER_GENERICO",
-        "key": "EMPRESA_FOOTER_3",
-        "value": "600 200 7000"
-    },
-    {
-        "group": "FOOTER_GENERICO",
-        "key": "EMPRESA_FOOTER_3",
-        "value": "Escríbenos"
-    }
-]
+{
+    "codigo":"DRU",
+    "estado":"OK",
+    "mensaje":"Listado contenido",
+    "data":[
+        {
+            "group": "GENERICO",
+            "key": "LABEL_MENUMAS_BTN_ACEPTAR",
+            "value": "Aceptar"
+        },
+        {
+            "group": "GENERICO",
+            "key": "LABEL_MENUMAS_BTN_CONTACTO-LOGIN",
+            "value": "Llama al 600 200 7000"
+        },
+        {
+            "group": "LANDING_EMPRESA",
+            "key": "EMPRESA_LANDING1_1",
+            "value": "Haz que tus clientes paguen en un sólo lugar."
+        },
+        {
+            "group": "LANDING_EMPRESA",
+            "key": "EMPRESA_LANDING1_2",
+            "value": "Si eres PYME o Empresa, en "
+        },
+        {
+            "group": "LANDING_EMPRESA",
+            "key": "EMPRESA_LANDING1_3_STRONG",
+            "value": "ServiEstado "
+        },
+        {
+            "group": "LANDING_EMPRESA",
+            "key": "EMPRESA_LANDING1_4",
+            "value": "te ofrecemos un convenio de recaudación "
+        },
+        {
+            "group": "LANDING_EMPRESA",
+            "key": "EMPRESA_LANDING1_5_STRONG",
+            "value": "a tu medida. "
+        },
+        {
+            "group": "HEADER_EMPRESA",
+            "key": "HEADER_EMPRESA_1",
+            "value": "Inicio"
+        },
+        {
+            "group": "HEADER_EMPRESA",
+            "key": "HEADER_EMPRESA_2",
+            "value": "Quienes Somos"
+        },
+        {
+            "group": "HEADER_EMPRESA",
+            "key": "HEADER_EMPRESA_3",
+            "value": "Ayuda"
+        },
+        {
+            "group": "HEADER_EMPRESA",
+            "key": "HEADER_EMPRESA_3",
+            "value": "Ingresar"
+        },
+        {
+            "group": "FOOTER_GENERICO",
+            "key": "EMPRESA_FOOTER_1",
+            "value": "¿ Quieres contactarte con nosotros?"
+        },
+        {
+            "group": "FOOTER_GENERICO",
+            "key": "EMPRESA_FOOTER_2",
+            "value": "LLámanos"
+        },
+        {
+            "group": "FOOTER_GENERICO",
+            "key": "EMPRESA_FOOTER_3",
+            "value": "600 200 7000"
+        },
+        {
+            "group": "FOOTER_GENERICO",
+            "key": "EMPRESA_FOOTER_3",
+            "value": "Escríbenos"
+        }
+    ]
+}
