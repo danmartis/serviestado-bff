@@ -6,6 +6,7 @@ export const controllerGestorContenido = (req, res) => {
   } catch (error) {
     console.log('Error:', error);
     return res.status(500).send('Error');
+    
   }
 }
 
