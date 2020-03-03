@@ -1,9 +1,10 @@
 import express from 'express';
 
-import { registroBiller } from '../../app/controllers/v1/registro.controller';
+import * as registroBillerController  from '../../app/controllers/v1/registro.controller';
 
 const router = express.Router();
 
-router.post('', registroBiller);
+router.post('', registroBillerController.registroBiller);
+router.get('/:id', registroBillerController.getBiller);
 
 export default router;
