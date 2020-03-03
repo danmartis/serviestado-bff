@@ -75,8 +75,23 @@
         },
         {
             "group": "FOOTER_GENERICO",
-            "key": "EMPRESA_FOOTER_3",
+            "key": "EMPRESA_FOOTER_4",
             "value": "Escríbenos"
+        },
+        {
+            "group": "FOOTER_GENERICO",
+            "key": "EMPRESA_FOOTER_5",
+            "value": "Centro de ayuda"
+        }, 
+        {
+            "group": "FOOTER_GENERICO",
+            "key": "EMPRESA_FOOTER_6",
+            "value": "Sucursales"
+        },
+        {
+            "group": "FOOTER_GENERICO",
+            "key": "EMPRESA_FOOTER_7",
+            "value": "© 2019 ServiEstado. Terminos y condiciones"
         }
     ]
 }
