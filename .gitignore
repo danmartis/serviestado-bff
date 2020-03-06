@@ -4,3 +4,4 @@ settings.json
 scripts/
 .npmrc
 .nyc_output
+coverage/*

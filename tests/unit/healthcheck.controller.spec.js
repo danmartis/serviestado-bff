@@ -1,42 +1,16 @@
-"use strict";
+import supertest from 'supertest';
+import '@babel/polyfill';
+import app from '../../src/app';
 
-// Imports
-const assert = require("chai").assert;
-const proxyquire = require("proxyquire").noCallThru();
-let healthcheck = null;
+const request = supertest(app);
+describe('Test Healthcheck', () => {
+    test('Healthcheck', async () => {
+        const res = await request.get('/bff/se-bff-empresas/v1/healthcheck')
+        expect(res.statusCode).toBe(200);
+    });
 
-// Tests
-const ResStub = function() {
-  return {
-    sendCalledWith: "",
-    statusCode: null,
-    status: function(code) {
-      this.statusCode = code;
-      return this;
-    },
-    send: function(args) {
-      this.sendCalledWith = args;
-      return this;
-    }
-  };
-};
-
-beforeEach(function() {
-    healthcheck = proxyquire(
-    "../../src/app/controllers/v1/healthcheck.controller",
-    {}
-  );
-});
-
-describe("healthcheck", function() {
-  it("should return OK", async function() {
-    let req = {
-      headers: {
-        codigosesion: "COD"
-      }
-    };
-    let res = new ResStub();
-    await healthcheck.healthcheck(req, res);
-    assert(res.statusCode === 200);
-  });
+    test('Check error', async () => {
+        const res = await request.get('/bff/ruta-mala')
+        expect(res.statusCode).toBe(404);
+    })
 });
