@@ -3,11 +3,11 @@ import questions from "../../mock-data/help-questions.json";
 import questionDetails from '../../mock-data/help-question-details.json';
 import videos from '../../mock-data/help-videos.json';
 
-export const controllerLandingContent = async (req, res) => {
+export const controllerLandingContent = async (req, res, next) => {
   try {
     return res.status(200).send(landing);
   } catch (error) {
-    return res.status(500).json(`Error: ${error}`);
+    next(error);
   }
 }
 
