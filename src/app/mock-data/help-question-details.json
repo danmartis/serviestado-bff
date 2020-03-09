@@ -1,0 +1,10 @@
+{
+    "code":"DRU",
+    "state":"OK",
+    "message":"Listado contenido",
+    "data":[
+        {
+            "content": "Contenido de detalle de preguntas"
+        }
+    ]
+}

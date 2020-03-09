@@ -1,7 +1,7 @@
 {
-    "codigo":"DRU",
-    "estado":"OK",
-    "mensaje":"Listado contenido",
+    "code":"DRU",
+    "state":"OK",
+    "message":"Listado contenido",
     "data":[
         {
             "group": "GENERICO",
