@@ -1,0 +1,1 @@
+export const mensajeSalida = (codigo, mensaje, data) => ({codigo,mensaje,data});
