@@ -7,7 +7,7 @@ export const controllerLandingContent = async (req, res, next) => {
   try {
     return res.status(200).send(landing);
   } catch (error) {
-    next(error);
+    return next.status(500).json(`Error: ${error}`);
   }
 }
 
