@@ -74,6 +74,8 @@
     ]
   },
   "jest": {
-    "testMatch": ["**/tests/unit/*.spec.js"]
+    "testMatch": [
+      "**/tests/unit/*.spec.js"
+    ]
   }
 }
