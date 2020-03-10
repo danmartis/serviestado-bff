@@ -20,6 +20,10 @@ export const LOGIN_BILLER_RESP = {
     SUCCESS: "Inicio de sesion correcto",
     ERROR: "Usuario o contraseña mal ingresado, verifique datos"
 }
+export const CHANGE_PASSWORD_RESP = {
+    SUCCESS: "Cambio de contraseña exitoso",
+    ERROR: "Ha ocurrido un error"
+}
 
 // FUNCION 
 // export const mensajeSalida = (code, message, data) => 
