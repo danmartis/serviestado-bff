@@ -1,10 +1,36 @@
 {
-    "code":"DRU",
-    "state":"OK",
-    "message":"Listado contenido",
-    "data":[
-        {
-            "content": "Contenido de videos"
-        }
-    ]
+    "code": "DRU",
+    "state": "OK",
+    "message": "Listado contenido",
+
+    "data": {
+        "titleMain": "Tutoriales de ayuda",
+        "button": "Ver más",
+        "videoItems": [{
+                "category": "Categoría A",
+                "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laudantium ipsam officiis minus quos.",
+                "description": "",
+                "videoId": "yigaZe45uaA"
+            },
+            {
+                "category": "Categoría B",
+                "title": "Video Título 2",
+                "description": "",
+                "videoId": "IWr8_TmBVa4"
+            },
+            {
+                "category": "Categoría B",
+                "title": "Video Título 3",
+                "description": "",
+                "videoId": "ihve3f3T4Qk"
+            },
+            {
+                "category": "Categoría 4",
+                "title": "Video Título 1",
+                "description": "",
+                "videoId": "w58DA6sCVG8"
+            }
+        ]
+
+    }
 }
