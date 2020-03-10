@@ -55,7 +55,6 @@ describe('Test gestor contenido', () => {
             await dataController.controllerVideosContent(req, res);
             expect(res.statusCode).toEqual(200);
         });
-
         it('Si la petición falla debería retornar un error', async () => {
             expect(() => {
                 dataController.controllerVideosContent();
