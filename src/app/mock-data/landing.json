@@ -49,19 +49,23 @@
         ],
         "feature": [{
                 "key": "FEATURE_1",
-                "value": "Recauda a la medida de tu empresa "
+                "value": "Recauda a la medida de tu empresa"
             },
             {
                 "key": "FEATURE_2",
-                "value": "En ServiEstado disponemos de múltiples tipos de recaudación. Además contamos con diversos servicios adicionales como: boleta personalizada, mensajería SMS, etc. "
+                "value": "En ServiEstado disponemos de múltiples tipos de recaudación. Además contamos con diversos servicios adicionales como: boleta personalizada, mensajería SMS, etc."
             },
             {
                 "key": "FEATURE_3",
-                "value": "Prueba de segundo párrafo. En ServiEstado disponemos de múltiples tipos de recaudación. "
+                "value": "Aprovecha las ventajas de ser cliente BancoEstado"
             },
             {
                 "key": "FEATURE_4",
-                "value": "En ServiEstado disponemos de múltiples tipos de recaudación. Además contamos con diversos servicios adicionales como: boleta personalizada, mensajería SMS, etc.  "
+                "value": "En ServiEstado disponemos de múltiples tipos de recaudación. Además contamos con diversos servicios adicionales como: boleta personalizada, mensajería SMS, etc."
+            },
+            {
+                "key": "FEATURE_5",
+                "value": "Prueba de segundo párrafo. En ServiEstado disponemos de múltiples tipos de recaudación."
             }
         ]
     }
