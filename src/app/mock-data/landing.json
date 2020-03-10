@@ -1,97 +1,72 @@
 {
-    "code":"DRU",
-    "state":"OK",
-    "message":"Listado contenido",
-    "data":[
-        {
-            "group": "GENERICO",
-            "key": "LABEL_MENUMAS_BTN_ACEPTAR",
-            "value": "Aceptar"
-        },
-        {
-            "group": "GENERICO",
-            "key": "LABEL_MENUMAS_BTN_CONTACTO-LOGIN",
-            "value": "Llama al 600 200 7000"
-        },
-        {
-            "group": "LANDING_EMPRESA",
-            "key": "EMPRESA_LANDING1_1",
-            "value": "Haz que tus clientes paguen en un sólo lugar."
-        },
-        {
-            "group": "LANDING_EMPRESA",
-            "key": "EMPRESA_LANDING1_2",
-            "value": "Si eres PYME o Empresa, en "
-        },
-        {
-            "group": "LANDING_EMPRESA",
-            "key": "EMPRESA_LANDING1_3_STRONG",
-            "value": "ServiEstado "
-        },
-        {
-            "group": "LANDING_EMPRESA",
-            "key": "EMPRESA_LANDING1_4",
-            "value": "te ofrecemos un convenio de recaudación "
-        },
-        {
-            "group": "LANDING_EMPRESA",
-            "key": "EMPRESA_LANDING1_5_STRONG",
-            "value": "a tu medida. "
-        },
-        {
-            "group": "HEADER_EMPRESA",
-            "key": "HEADER_EMPRESA_1",
-            "value": "Inicio"
-        },
-        {
-            "group": "HEADER_EMPRESA",
-            "key": "HEADER_EMPRESA_2",
-            "value": "Quienes Somos"
-        },
-        {
-            "group": "HEADER_EMPRESA",
-            "key": "HEADER_EMPRESA_3",
-            "value": "Ayuda"
-        },
-        {
-            "group": "HEADER_EMPRESA",
-            "key": "HEADER_EMPRESA_3",
-            "value": "Ingresar"
-        },
-        {
-            "group": "FOOTER_GENERICO",
-            "key": "EMPRESA_FOOTER_1",
-            "value": "¿ Quieres contactarte con nosotros?"
-        },
-        {
-            "group": "FOOTER_GENERICO",
-            "key": "EMPRESA_FOOTER_2",
-            "value": "LLámanos"
-        },
-        {
-            "group": "FOOTER_GENERICO",
-            "key": "EMPRESA_FOOTER_3",
-            "value": "600 200 7000"
-        },
-        {
-            "group": "FOOTER_GENERICO",
-            "key": "EMPRESA_FOOTER_4",
-            "value": "Escríbenos"
-        },
-        {
-            "group": "FOOTER_GENERICO",
-            "key": "EMPRESA_FOOTER_5",
-            "value": "Centro de ayuda"
-        }, 
-        {
-            "group": "FOOTER_GENERICO",
-            "key": "EMPRESA_FOOTER_6",
-            "value": "Sucursales"
-        },
-        {
-            "group": "FOOTER_GENERICO",
-            "key": "EMPRESA_FOOTER_7",
-            "value": "© 2019 ServiEstado. Terminos y condiciones"
-        }
-    ]
+    "code": "DRU",
+    "state": "OK",
+    "message": "Listado contenido",
+    "data": {
+        "banner": [{
+                "key": "BANNER_1",
+                "value": "Haz que tus clientes paguen en un sólo lugar."
+            },
+            {
+                "key": "BANNER_2",
+                "value": "Si eres PYME o Empresa, en "
+            },
+            {
+                "key": "BANNER_3",
+                "value": "ServiEstado "
+            },
+            {
+                "key": "BANNER_4",
+                "value": "te ofrecemos un convenio de recaudación "
+            },
+            {
+                "key": "BANNER_5",
+                "value": "a tu medida. "
+            },
+            {
+                "key": "BANNER_6",
+                "value": "Me interesa "
+            }
+        ],
+        "benefits": [{
+                "title": "Gestión fácil",
+                "description": "de tus convenios, facturaciones, comprobantes y nóminas de recaudación.",
+                "iconSrc": "/assets/imgs/svg/icono_gestion.svg",
+                "lineColor": "#FFB842"
+            },
+            {
+                "title": "Trazabilidad y visibilidad",
+                "description": "de todos los procesos, hasta el abono de las recaudaciones en la cuenta que indiques.",
+                "iconSrc": "/assets/imgs/svg/icono_trazabilidad.svg",
+                "lineColor": "#1E63F8"
+            },
+            {
+                "title": "Seguridad y respaldo",
+                "description": "un ejecutivo siempre estará dispuesto a resolver tus dudas.",
+                "iconSrc": "/assets/imgs/svg/icono_seguridad.svg",
+                "lineColor": "#00D692"
+            }
+        ],
+        "feature": [{
+                "key": "FEATURE_1",
+                "value": "Recauda a la medida de tu empresa"
+            },
+            {
+                "key": "FEATURE_2",
+                "value": "En ServiEstado disponemos de múltiples tipos de recaudación. Además contamos con diversos servicios adicionales como: boleta personalizada, mensajería SMS, etc."
+            },
+            {
+                "key": "FEATURE_3",
+                "value": "Aprovecha las ventajas de ser cliente BancoEstado"
+            },
+            {
+                "key": "FEATURE_4",
+                "value": "En ServiEstado disponemos de múltiples tipos de recaudación. Además contamos con diversos servicios adicionales como: boleta personalizada, mensajería SMS, etc."
+            },
+            {
+                "key": "FEATURE_5",
+                "value": "Prueba de segundo párrafo. En ServiEstado disponemos de múltiples tipos de recaudación."
+            }
+        ]
+    }
 }
