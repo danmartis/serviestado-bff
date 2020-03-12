@@ -5,7 +5,7 @@
     "data": {
         "title": "¿Necesitas ayuda?",
         "subtitle": "Aquí podrás buscar respuestas a tus preguntas",
-        "questions-title": "Preguntas frecuentes",
+        "questionsTitle": "Preguntas frecuentes",
         "content": [
             {
                 "icon": "insert_drive_file",
