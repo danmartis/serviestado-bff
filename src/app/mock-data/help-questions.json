@@ -3,7 +3,9 @@
     "state": "OK",
     "message": "Listado contenido",
     "data": {
-        "title": "Preguntas frecuentes",
+        "title": "¿Necesitas ayuda?",
+        "subtitle": "Aquí podrás buscar respuestas a tus preguntas",
+        "questions-title": "Preguntas frecuentes",
         "content": [
             {
                 "icon": "insert_drive_file",
