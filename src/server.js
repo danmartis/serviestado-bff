@@ -1,11 +1,17 @@
 import app from './app';
 import { microservicios } from "./config/config";
 
+import swaggerUi from "swagger-ui-express";
+import YAML from "yamljs";
+
+const swaggerDocument = YAML.load('./swagger-docs.yaml');
+
 // Para desarrollo, muestra todas los endpoint del router
 import listEndpoints from "express-list-endpoints";
 
 async function main() {  
     let port = microservicios.port;
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     app.listen(port, () => {
       console.log("Servidor ejecutandose en el puerto: " + port);
       console.log(listEndpoints(app));
