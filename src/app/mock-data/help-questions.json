@@ -8,30 +8,36 @@
         "questionsTitle": "Preguntas frecuentes",
         "content": [
             {
+                "id": 1,
                 "icon": "insert_drive_file",
                 "category": "Recaudaciones",
                 "items": [
                     {
+                        "id": 1,
                         "question": "Recauda con nosotros",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "20"
                     },
                     {
+                        "id": 2,
                         "question": "Tipos de conexión disponible",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "19"
                     },
                     {
+                        "id": 3,
                         "question": "Active tu convenio",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "18"
                     },
                     {
+                        "id": 4,
                         "question": "Alternativas de recaudación",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "17"
                     },
                     {
+                        "id": 5,
                         "question": "Beneficio para tus clientes",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "16"
@@ -39,30 +45,36 @@
                 ]
             },
             {
+                "id": 2,
                 "icon": "credit_card",
                 "category": "Pago de cuentas",
                 "items": [
                     {
+                        "id": 1,
                         "question": "Inscribe tus cuentas",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "20"
                     },
                     {
+                        "id": 2,
                         "question": "Paga tus cuentas",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "19"
                     },
                     {
+                        "id": 3,
                         "question": "Agrupa tus cuentas",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "18"
                     },
                     {
+                        "id": 4,
                         "question": "Paga tus cuentas masivamente",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "17"
                     },
                     {
+                        "id": 5,
                         "question": "Enrola tu medio de pago",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "16"
@@ -70,30 +82,36 @@
                 ]
             },
             {
+                "id": 3,
                 "icon": "wifi",
                 "category": "Servicios en línea",
                 "items": [
                     {
+                        "id": 1,
                         "question": "Reportes",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "20"
                     },
                     {
+                        "id": 2,
                         "question": "Rendiciones",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "19"
                     },
                     {
+                        "id": 4,
                         "question": "Configuración de comprobante",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "18"
                     },
                     {
+                        "id": 5,
                         "question": "Configuración de convenio",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "17"
                     },
                     {
+                        "id": 6,
                         "question": "Administración de perfiles",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "16"
@@ -101,20 +119,24 @@
                 ]
             },
             {
+                "id": 4,
                 "icon": "check_circle",
                 "category": "Otros",
                 "items": [
                     {
+                        "id": 1,
                         "question": "Quiénes pueden operar",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "20"
                     },
                     {
+                        "id": 2,
                         "question": "Nosotros",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "19"
                     },
                     {
+                        "id": 3,
                         "question": "¿Cómo me registro?",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "18"
