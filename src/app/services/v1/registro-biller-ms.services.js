@@ -1,54 +1,18 @@
 import axios from "axios";
 
-const users = [
-    {
-        email: 'cliente@cliente.cl',
-        rut: '11111111-1',
-        password: 'RC123456',
-        changePassword: true
-    },
-    {
-        email: 'entel@cliente.cl',
-        rut: '11111111-2',
-        password: '12345678',
-        changePassword: false
-    },
-];
-
-const indexBy = (array, key) => array.reduce((acc, val) => { acc[val[key]] = val; return acc }, {});
-
-const usersIndexed = indexBy(users, 'rut');
+const urlMS = process.env.URL_MS_REGISTRO_BILLER || "http://se-ms-convenios/ms/se-ms-registrobiller/v1";
 
 export const sendRegistroBillerMS = (dataIn) => {
-    // return axios.post('url-ms', data);
-    return dataIn;
+    const url = `${urlMS}/registro-biller`
+    return axios.post(url, data);
 }
 
 export const loginBillerMS = (dataIn) => {
-    // return axios.post('url-ms', dataIn);
-    return new Promise( (resolve, reject) => {
-        const user = usersIndexed[dataIn.rut];
-        if( !user ) reject("Usuario no encontrado");
-        if( user.email === dataIn.email && user.password === dataIn.password){
-            resolve(user);
-        } else {
-            reject("Usuario o contraseña incorrecto");
-        }
-    })
+    const url = `${urlMS}/login`
+    return axios.post(url, dataIn);
 }
 
 export const changePasswordBillerMS = (dataIn) => {
-    // return axios.put('url-ms', dataIn);
-    return new Promise( (resolve, reject) => {
-        const user = usersIndexed[dataIn.rut];
-        if(!user) reject("Usuario no encontrado");
-        if( user.email === dataIn.email && user.password === dataIn.oldPassword && user.changePassword === true){
-            user.password = dataIn.newPassword;
-            user.changePassword = false;
-            usersIndexed[dataIn.rut] = user;
-            resolve(user)
-        } else {
-            reject("No puede cambiar contraseña, verifique informacion")
-        }
-    })
+    const url = `${urlMS}/login/cambio-contrasenia`
+    return axios.put(url, dataIn);
 }
