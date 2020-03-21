@@ -5,3 +5,4 @@ scripts/
 .npmrc
 .nyc_output
 coverage/*
+dist/*
