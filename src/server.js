@@ -13,7 +13,6 @@ async function main() {
     app.use(`${base}/api-docs`, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     app.listen(port, () => {
       console.log("Servidor ejecutandose en el puerto: " + port);
-      console.log(process.env.PORT);
       console.log(listEndpoints(app));
     });
   }
