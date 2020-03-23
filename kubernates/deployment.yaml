@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: se-bff-empresas
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: se-bff-empresas
+      #portal: personas
+      #tipo: ms
+  template:
+    metadata:
+      labels:
+        app: se-bff-empresas
+    spec:
+      containers:
+        - name: se-bff-empresas
+          image: 483819493476.dkr.ecr.us-east-1.amazonaws.com/se-bff-empresas:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              protocol: TCP
