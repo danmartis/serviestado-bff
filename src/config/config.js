@@ -15,7 +15,7 @@ function addEnvParam(paramName, required) {
 /* Constantes de variables de entorno */
 
 const microservicios = {
-  port: addEnvParam("PORT", false) || 3000,
+  port: addEnvParam("PORT", false) || 8080,
   checkCertificate: process.env.NODE_ENV === ("produccion" || "production")
 };
 
