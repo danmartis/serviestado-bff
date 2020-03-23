@@ -5,7 +5,7 @@ const router = Router();
 
 import v1 from "./v1";
 
-const base = "/bff/se-bff-empresas";
+export const base = "/bff/se-bff-empresas";
 
 router.use('/v1', v1);
 
