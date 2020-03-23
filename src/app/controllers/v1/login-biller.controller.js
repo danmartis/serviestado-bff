@@ -8,12 +8,12 @@ export const loginBiller = (req,res) => {
             res.status(CODE_RESP_OK)
                     .json( mensajeSalida(CODE_MESSAGE_OK,
                                         LOGIN_BILLER_RESP.SUCCESS, 
-                                        { ...data })) )
+                                        { ...data.response.data })) )
         .catch( err => 
-            res.status(CODE_RESP_BAD_REQUEST)
+                res.status(CODE_RESP_BAD_REQUEST)
                     .json( mensajeSalida(CODE_MESSAGE_ERROR,
                                         LOGIN_BILLER_RESP.ERROR, 
-                                        { message: err })) )
+                                        { ...err.response.data })) )
 }
 
 export const changePasswordBiller = (req,res) => {
@@ -23,10 +23,10 @@ export const changePasswordBiller = (req,res) => {
                     res.status(CODE_RESP_OK)
                         .json( mensajeSalida(CODE_MESSAGE_OK,
                                             CHANGE_PASSWORD_RESP.SUCCESS,
-                                            { ...data })))
+                                            { ...data.response.data })))
         .catch( err => 
                     res.status(CODE_RESP_BAD_REQUEST)
                         .json( mensajeSalida(CODE_MESSAGE_ERROR,
                                             CHANGE_PASSWORD_RESP.ERROR,
-                                            { err })))
+                                            { ...err.response.data })))
 }
