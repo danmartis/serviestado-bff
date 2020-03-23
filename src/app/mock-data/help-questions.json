@@ -6,13 +6,11 @@
         "title": "¿Necesitas ayuda?",
         "subtitle": "Aquí podrás buscar respuestas a tus preguntas",
         "questionsTitle": "Preguntas frecuentes",
-        "content": [
-            {
+        "content": [{
                 "id": 1,
                 "icon": "insert_drive_file",
                 "category": "Recaudaciones",
-                "items": [
-                    {
+                "items": [{
                         "id": 1,
                         "idGroup": 1,
                         "question": "Recauda con nosotros",
@@ -46,15 +44,6 @@
                         "question": "Beneficio para tus clientes",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "16"
-                    },
-                    {
-                        "detail": [
-                            {
-                                "id": 1,
-                                "idGroup": 1,
-                                "viewMore": "Ver más"
-                            }
-                        ]
                     }
                 ]
             },
@@ -62,8 +51,7 @@
                 "id": 2,
                 "icon": "credit_card",
                 "category": "Pago de cuentas",
-                "items": [
-                    {
+                "items": [{
                         "id": 1,
                         "idGroup": 2,
                         "question": "Inscribe tus cuentas",
@@ -97,15 +85,6 @@
                         "question": "Enrola tu medio de pago",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "16"
-                    },
-                    {
-                        "detail": [
-                            {
-                                "id": 1,
-                                "idGroup": 2,
-                                "viewMore": "Ver más"
-                            }
-                        ]
                     }
                 ]
             },
@@ -113,8 +92,7 @@
                 "id": 3,
                 "icon": "wifi",
                 "category": "Servicios en línea",
-                "items": [
-                    {
+                "items": [{
                         "id": 1,
                         "idGroup": 3,
                         "question": "Reportes",
@@ -148,15 +126,6 @@
                         "question": "Administración de perfiles",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "16"
-                    },
-                    {
-                        "detail": [
-                            {
-                                "id": 1,
-                                "idGroup": 3,
-                                "viewMore": "Ver más"
-                            }
-                        ]
                     }
                 ]
             },
@@ -164,8 +133,7 @@
                 "id": 4,
                 "icon": "check_circle",
                 "category": "Otros",
-                "items": [
-                    {
+                "items": [{
                         "id": 1,
                         "idGroup": 4,
                         "question": "Quiénes pueden operar",
@@ -185,15 +153,6 @@
                         "question": "¿Cómo me registro?",
                         "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatibus ex officia dolorem molestias soluta tempora neque commodi ipsum harum deleniti incidunt itaque, atque ab asperiores numquam perferendis id quas?",
                         "views": "18"
-                    },
-                    {
-                        "detail": [
-                            {
-                                "id": 1,
-                                "idGroup": 4,
-                                "viewMore": "Ver más"
-                            }
-                        ]
                     }
                 ]
             }
