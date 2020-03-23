@@ -1,7 +1,8 @@
+
 function addEnvParam(paramName, required) {
   // Evaluación del parámetro
   var parameter = process.env[paramName];
-
+  console.log("Param ",parameter)
   if (!parameter) {
     if (required)
       throw new Error("No se definió la variable de entorno " + paramName);

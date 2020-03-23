@@ -1,6 +1,5 @@
 import app from './app';
 import { microservicios } from "./config/config";
-
 import swaggerUi from "swagger-ui-express";
 import YAML from "yamljs";
 
@@ -14,6 +13,7 @@ async function main() {
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     app.listen(port, () => {
       console.log("Servidor ejecutandose en el puerto: " + port);
+      console.log(process.env.PORT);
       console.log(listEndpoints(app));
     });
   }

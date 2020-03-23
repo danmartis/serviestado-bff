@@ -4,29 +4,29 @@ import { mensajeSalida, CODE_MESSAGE_OK, CODE_RESP_OK, CODE_RESP_BAD_REQUEST, CO
 export const loginBiller = (req,res) => {
     const body = req.body;
     loginBillerMS(body)
-        .then( data => 
-            res.status(CODE_RESP_OK)
+        .then( response => 
+                res.status(CODE_RESP_OK)
                     .json( mensajeSalida(CODE_MESSAGE_OK,
                                         LOGIN_BILLER_RESP.SUCCESS, 
-                                        { ...data })) )
+                                        { ...response.data })))
         .catch( err => 
             res.status(CODE_RESP_BAD_REQUEST)
-                    .json( mensajeSalida(CODE_MESSAGE_ERROR,
-                                        LOGIN_BILLER_RESP.ERROR, 
-                                        { message: err })) )
+                        .json( mensajeSalida(CODE_MESSAGE_ERROR,
+                                            CHANGE_PASSWORD_RESP.ERROR,
+                                            { ...err.response.data })) )
 }
 
 export const changePasswordBiller = (req,res) => {
     const body = req.body;
     changePasswordBillerMS(body)
-        .then( data => 
+        .then( response => 
                     res.status(CODE_RESP_OK)
                         .json( mensajeSalida(CODE_MESSAGE_OK,
                                             CHANGE_PASSWORD_RESP.SUCCESS,
-                                            { ...data })))
+                                            { ...response.data })))
         .catch( err => 
                     res.status(CODE_RESP_BAD_REQUEST)
                         .json( mensajeSalida(CODE_MESSAGE_ERROR,
                                             CHANGE_PASSWORD_RESP.ERROR,
-                                            { err })))
+                                            { ...err.response.data })))
 }
