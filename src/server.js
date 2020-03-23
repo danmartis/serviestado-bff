@@ -3,7 +3,7 @@ import { microservicios } from "./config/config";
 import swaggerUi from "swagger-ui-express";
 import YAML from "yamljs";
 import { base } from './routes/index';
-const swaggerDocument = YAML.load('./swagger-docs.yaml');
+const swaggerDocument = YAML.load('./bff_spec.yaml');
 
 // Para desarrollo, muestra todas los endpoint del router
 import listEndpoints from "express-list-endpoints";
