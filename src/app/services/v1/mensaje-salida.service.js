@@ -1,4 +1,4 @@
-export const mensajeSalida = (codigo, mensaje, data) => ({codigo,mensaje,data});
+export const mensajeSalida = (codigo, mensaje, data) => ({codigo,mensaje, data});
 // CÓDIGO DE RESPUESTA
 export const CODE_RESP_OK = 200;
 export const CODE_RESP_CREATED = 201;

@@ -25,7 +25,7 @@ export const registroBiller = (req,res) => {
     .then( data => sendRegistroBillerMS(data))
     .then( data => res.status(200).json( mensajeSalida(CODE_MESSAGE_OK,
                                                         REGISTRO_BILLER_RESP.SUCCESS,
-                                                        ...data.response.data)))
+                                                        ...data.data )))
     .catch( err => res.status(400).json( mensajeSalida(CODE_MESSAGE_ERROR,
                                                         REGISTRO_BILLER_RESP.ERROR,
                                                         ...err.response.data)));
