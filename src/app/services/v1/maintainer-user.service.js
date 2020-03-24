@@ -7,3 +7,8 @@ export const registerNewUser = (dataIn) => {
     console.log('url: ', url);
     return axios.post(url, data);
 }
+
+export const personalInformation = (dataIn) => {
+    const url = `${urlMS}/maintainer-user/informacion-personal`;
+    return axios.post(url, dataIn);
+}

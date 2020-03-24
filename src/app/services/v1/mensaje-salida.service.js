@@ -1,4 +1,4 @@
-export const mensajeSalida = (codigo, mensaje, data) => ({codigo,mensaje, data});
+export const mensajeSalida = (codigo, mensaje, data) => ({ codigo, mensaje, data });
 // CÓDIGO DE RESPUESTA
 export const CODE_RESP_OK = 200;
 export const CODE_RESP_CREATED = 201;
@@ -22,6 +22,10 @@ export const LOGIN_BILLER_RESP = {
 }
 export const CHANGE_PASSWORD_RESP = {
     SUCCESS: "Cambio de contraseña exitoso",
+    ERROR: "Ha ocurrido un error"
+}
+export const GET_DATA_USER = {
+    SUCCESS: "Datos encontrados con éxito",
     ERROR: "Ha ocurrido un error"
 }
 
