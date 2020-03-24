@@ -19,6 +19,7 @@ describe('Test registro controller', () => {
         const res = await request
                         .post('/bff/se-bff-empresas/v1/registro-biller')
                         .send(data);
+        console.log(res.body)
         expect(res.statusCode).toEqual(200);
     });
 

@@ -5,9 +5,9 @@ import app from '../../src/app';
 const request = supertest(app);
 
 const loginData = {
-    "email": "cliente@cliente.cl",
-    "rut": "11111111-1",
-    "password": "RC123456"
+    "email": "entel@cliente.cl",
+    "rut": "92580000-7",
+    "password": "entel123"
 };
 
 const loginErrorData = {
@@ -17,16 +17,16 @@ const loginErrorData = {
 };
 
 const changePasswordData = {
-    "email": "cliente@cliente.cl",
-    "rut": "11111111-1",
-    "oldPassword": "RC123456",
-    "newPassword": "12345678"
+    email: "claudio.monasterio@telefonica.com",
+    rut: "76124890-1",
+    oldPassword: "movistar",
+    newPassword: "12345678"
 }
 
-const changePasswordDataNOK = {
-    email: 'entel@cliente.cl',
-    rut: '11111111-2',
-    oldPassword: '12345678',
+const changePasswordDataNOK = {    
+    "email": "entel@cliente.cl",
+    "rut": "92580000-7",
+    "oldPassword": "entel123"
 }
 
 describe("Test login biller", () => {
