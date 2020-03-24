@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const urlMS = process.env.URL_MS_REGISTRO_BILLER || "http://se-ms-convenios/ms/se-ms-registrobiller/v1";
+const urlMS = process.env.URL_MS_REGISTRO_BILLER || "http://se-ms-registrobiller/ms/se-ms-registrobiller/v1";
 
 export const sendRegistroBillerMS = (dataIn) => {
     const url = `${urlMS}/registro-biller`;
