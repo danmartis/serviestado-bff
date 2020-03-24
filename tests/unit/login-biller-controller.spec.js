@@ -35,13 +35,17 @@ describe("Test login biller", () => {
                         .post('/bff/se-bff-empresas/v1/login')
                         .send(loginData)
         expect(res.statusCode).toEqual(200);
-    })
+        expect(res.body.codigo).toEqual("OK");
+        expect(res.body.mensaje).toEqual("Inicio de sesion correcto")
+    });
 
     test("Login incorrecto", async () => {
         const res = await request
                         .post('/bff/se-bff-empresas/v1/login')
                         .send(loginErrorData)
-        expect(res.statusCode).toEqual(400);
+        expect(res.statusCode).toEqual(400)
+        expect(res.body.codigo).toEqual("ERROR")
+        expect(res.body.mensaje).toEqual("Ha ocurrido un error")
     })
 
     test("Usuario no existe", async () => {

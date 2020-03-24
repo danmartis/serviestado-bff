@@ -4,14 +4,11 @@ const urlMS = process.env.URL_MS_REGISTRO_BILLER || "http://se-ms-registrobiller
 
 export const sendRegistroBillerMS = (dataIn) => {
     const url = `${urlMS}/registro-biller`;
-    console.log('url: ', url);
-    return axios.post(url, data);
+    return axios.post(url, dataIn);
 }
 
 export const loginBillerMS = (dataIn) => {
     const url = `${urlMS}/login`;
-    console.log('url: ', url);
-    console.log("data: ", dataIn);
     return axios.post(url, dataIn);
 }
 

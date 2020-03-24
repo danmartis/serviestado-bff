@@ -8,7 +8,7 @@ const data = {
     "name" : "Pedro",
     "last_name" : "Engel",
     "email" : "pedrito@engel.cl",
-    "phone" : "+56123456789",
+    "phone" : "9123456789",
     "position" : "Big Boss"
 }
 

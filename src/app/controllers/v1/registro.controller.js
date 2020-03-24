@@ -1,6 +1,6 @@
 import { sendRegistroBillerMS } from '../../services/v1/registro-biller-ms.services';
 import Joi from '@hapi/joi';
-import { mensajeSalida, CODE_RESP_OK, CODE_MESSAGE_ERROR, REGISTRO_BILLER_RESP } from '../../services/v1/mensaje-salida.service';
+import { mensajeSalida, CODE_RESP_OK, CODE_MESSAGE_ERROR, REGISTRO_BILLER_RESP, CODE_MESSAGE_OK } from '../../services/v1/mensaje-salida.service';
 
 const formSchema = Joi.object({
     business_name: Joi.string().required(),
@@ -13,22 +13,15 @@ const formSchema = Joi.object({
 })
 
 export const registroBiller = (req,res) => {
-    new Promise( (resolve, reject) => {
-        let body = req.body;
-        const { error, value } = formSchema.validate(body);
-        if( error ){
-            reject(error);
-        } else {
-            resolve(value);
-        }
-    })
-    .then( data => sendRegistroBillerMS(data))
+    const dataIn = req.body;
+
+    sendRegistroBillerMS(dataIn)
     .then( data => res.status(200).json( mensajeSalida(CODE_MESSAGE_OK,
                                                         REGISTRO_BILLER_RESP.SUCCESS,
                                                         {...data.data} )))
     .catch( err => res.status(400).json( mensajeSalida(CODE_MESSAGE_ERROR,
                                                         REGISTRO_BILLER_RESP.ERROR,
-                                                        {...err})));
+                                                        { ...err.response.data })) );
 }
 
 export const getBiller = (req,res) => {
