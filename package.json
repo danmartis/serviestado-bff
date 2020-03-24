@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "nodemon --exec babel-node -r dotenv/config  src/server.js",
     "build": "babel src --out-dir dist",
-    "test": "jest --coverage",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "test-dev": "jest --coverage --setupFiles dotenv/config",
     "start": "node dist/server.js",
     "debug": "node --inspect src/app.js",
     "lint": "eslint ./",
@@ -81,7 +83,7 @@
   },
   "jest": {
     "testMatch": [
-      "*/tests/unit/.spec.js"
+      "**/tests/unit/*.spec.js"
     ]
   }
 }
