@@ -8,7 +8,7 @@ info:
 
 servers:
   - url: http://a69a56848693011eab3eb0e1f5b95262-922333886.us-east-1.elb.amazonaws.com/bff/se-bff-empresas/v1/
-  - url: http://localhost:3000/bff/se-bff-empresas/v1
+  - url: http://localhost:8080/bff/se-bff-empresas/v1
 
 
 tags:
@@ -86,6 +86,29 @@ paths:
             application/json:    
               schema:
                 $ref: "#/components/schemas/ApiResponseIncorrectData"
+  /login/recover-password:
+    post:
+      tags:
+      - "login"
+      summary: "Recupera clave a un usuario BIller"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/recoverPasswords"
+      responses:
+        200:
+          description: "Datos Correctos"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseCorrectData"
+        400:
+          description: "Datos incompletos"
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/ApiResponseIncorrectData"
 components:
   schemas:
   
@@ -143,6 +166,15 @@ components:
         newPassword:
           type: "string"
           example: "12345678"
+    recoverPassword:
+      type: "object"
+      properties:
+        rut:
+          type: "string"
+          example: "76124890-1"
+        email:
+          type: "string"
+          example: "claudio.monasterio@telefonica.com"
     ApiResponseCorrectData:
       type: "object"
       properties:

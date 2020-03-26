@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node -r dotenv/config  src/server.js",
     "build": "babel src --out-dir dist",
+    "build-test": "npm run build && cp -a src/app/mock-data  dist/app/mock-data && npm run start",
     "test": "jest",
     "test-coverage": "jest --coverage",
     "test-dev": "jest --coverage --setupFiles dotenv/config",
