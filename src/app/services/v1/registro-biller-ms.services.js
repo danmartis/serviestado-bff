@@ -18,3 +18,8 @@ export const changePasswordBillerMS = dataIn => {
   const url = `${urlMS}/login/cambio-contrasenia`;
   return axios.put(url, dataIn);
 };
+
+export const recoverPasswordMS = dataIn => {
+  const url = `${urlMS}/login/recover-password`;
+  return axios.post(url, dataIn);
+};
