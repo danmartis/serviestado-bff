@@ -33,6 +33,10 @@ export const GET_DATA_USER = {
   SUCCESS: "Datos encontrados con éxito",
   ERROR: "Ha ocurrido un error"
 };
+export const RECOVER_PASSWORD = {
+  SUCCESS: "Recuperación extosa",
+  ERROR: "Error al recuperar contraseña"
+};
 
 // FUNCION
 // export const mensajeSalida = (code, message, data) =>

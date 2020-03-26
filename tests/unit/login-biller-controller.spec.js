@@ -29,6 +29,16 @@ const changePasswordDataNOK = {
   oldPassword: "entel123"
 };
 
+const recoverPasswordOK = {
+  email: "claudio.monasterio@telefonica.com",
+  rut: "76124890-1",
+};
+
+const recoverPasswordNOK = {
+  email: "claudio.monasterio@telefonica.cl",
+  rut: "76124890-1",
+}
+
 describe("Test login biller", () => {
   test("Login correcto", async () => {
     const res = await request
@@ -73,6 +83,20 @@ describe("Test login biller", () => {
     const res = await request
       .put("/bff/se-bff-empresas/v1/login/change-password")
       .send({ rut: "1234" });
+    expect(res.statusCode).toEqual(400);
+  });
+
+  // RECOVER PASSWORD
+  test("recover Password OK", async () => {
+    const res = await request
+      .post("/bff/se-bff-empresas/v1/login/recover-password")
+      .send(recoverPasswordOK);
+    expect(res.statusCode).toEqual(200);
+  });
+  test("recover Password NOK", async () => {
+    const res = await request
+      .post("/bff/se-bff-empresas/v1/login/recover-password")
+      .send(recoverPasswordNOK);
     expect(res.statusCode).toEqual(400);
   });
 });

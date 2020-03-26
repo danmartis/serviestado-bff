@@ -1,10 +1,14 @@
 import { Router } from 'express';
+import {
+  loginBiller,
+  changePasswordBiller,
+  recoverPassword
+} from "../../app/controllers/v1/login-biller.controller";
 
 const router = Router();
 
-import * as loginBillerController from '../../app/controllers/v1/login-biller.controller';
-
-router.post('', loginBillerController.loginBiller);
-router.put('/change-password', loginBillerController.changePasswordBiller);
+router.post('', loginBiller);
+router.put('/change-password', changePasswordBiller);
+router.post('/recover-password', recoverPassword);
 
 export default router;

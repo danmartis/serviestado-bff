@@ -1,6 +1,7 @@
 import {
   loginBillerMS,
-  changePasswordBillerMS
+  changePasswordBillerMS,
+  recoverPasswordMS
 } from "../../services/v1/registro-biller-ms.services";
 import {
   mensajeSalida,
@@ -9,7 +10,8 @@ import {
   CODE_RESP_BAD_REQUEST,
   CODE_MESSAGE_ERROR,
   LOGIN_BILLER_RESP,
-  CHANGE_PASSWORD_RESP
+  CHANGE_PASSWORD_RESP,
+  RECOVER_PASSWORD
 } from "../../utils/mensaje-salida.service";
 
 export const loginBiller = (req, res) => {
@@ -48,4 +50,23 @@ export const changePasswordBiller = (req, res) => {
         })
       )
     );
+};
+
+
+export const recoverPassword = (req, res) => {
+  const body = req.body;
+  recoverPasswordMS(body)
+    .then(response => {
+      res.status(CODE_RESP_OK).json(
+        mensajeSalida(CODE_MESSAGE_OK, RECOVER_PASSWORD.SUCCESS, {
+          ...response.data
+        })
+      )
+    }).catch( err => {
+      res.status(CODE_RESP_BAD_REQUEST).json(
+        mensajeSalida(CODE_MESSAGE_ERROR, RECOVER_PASSWORD.ERROR, {
+          ...err.response.data
+        })
+      )
+    })
 };
