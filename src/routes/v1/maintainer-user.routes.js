@@ -6,4 +6,5 @@ const router = express.Router();
 
 router.post('/registerNewUser', maintainerUserController.RegisterNewUser);
 router.post('/personalInformation', maintainerUserController.PersonalInformation);
+router.put('/updatePerfilUser', maintainerUserController.UpdatePerfilUser);
 export default router;

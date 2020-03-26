@@ -6,11 +6,15 @@ const urlMS =
 
 export const registerNewUser = dataIn => {
   const url = `${urlMS}/maintainerUser/registerNewUser`;
-  console.log("url: ", url);
   return axios.post(url, data);
 };
 
 export const personalInformation = dataIn => {
   const url = `${urlMS}/maintainer-user/informacion-personal`;
   return axios.post(url, dataIn);
+};
+
+export const updatePerfilUser = dataIn => {
+  const url = `${urlMS}/maintainer-user/editar-perfil`;
+  return axios.put(url, dataIn);
 };
