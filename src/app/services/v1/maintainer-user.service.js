@@ -5,8 +5,8 @@ const urlMS =
   "http://se-ms-registrobiller/ms/se-ms-registrobiller/v1";
 
 export const registerNewUser = dataIn => {
-  const url = `${urlMS}/maintainerUser/registerNewUser`;
-  return axios.post(url, data);
+  const url = `${urlMS}/maintainer-user/registerNewUser`;
+  return axios.post(url, dataIn);
 };
 
 export const personalInformation = dataIn => {

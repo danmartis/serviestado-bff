@@ -10,33 +10,27 @@ import {
   CODE_RESP_BAD_REQUEST,
   CODE_MESSAGE_ERROR,
   GET_DATA_USER,
+  REGISTER_NEW_USER,
   UPDATE_DATA_USER
 } from "../../utils/mensaje-salida.service";
-import Joi from "@hapi/joi";
-
-const formSchema = Joi.object({
-  name: Joi.string().required(),
-  email: Joi.string()
-    .email()
-    .required(),
-  perfil: Joi.string().required(),
-  contacto: Joi.string().required(),
-  asignar: Joi.boolean().required()
-});
 
 export const RegisterNewUser = (req, res) => {
-  new Promise((resolve, reject) => {
-    let body = req.body;
-    const { error, value } = formSchema.validate(body);
-    if (error) {
-      reject(error);
-    } else {
-      resolve(value);
-    }
-  })
-    .then(data => registerNewUser(data))
-    .then(data => res.status(200).json({ ok: true, data }))
-    .catch(err => res.status(400).json({ ok: false, error: err }));
+  const body = req.body;
+  console.log('RegisterNewUser', body);
+  registerNewUser(body)
+    .then(response =>
+      res.status(CODE_RESP_OK).json(
+        mensajeSalida(CODE_MESSAGE_OK, REGISTER_NEW_USER.SUCCESS, {
+          ...response.data
+        })
+      )
+    ).catch(err =>
+      res.status(CODE_RESP_BAD_REQUEST).json(
+        mensajeSalida(CODE_MESSAGE_ERROR, REGISTER_NEW_USER.ERROR, {
+          ...err.response.data
+        })
+      )
+    );
 };
 
 export const PersonalInformation = (req, res) => {
