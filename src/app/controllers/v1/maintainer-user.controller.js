@@ -1,6 +1,7 @@
 import {
   registerNewUser,
-  personalInformation
+  personalInformation,
+  updatePerfilUser
 } from "../../services/v1/maintainer-user.service";
 import {
   mensajeSalida,
@@ -8,7 +9,8 @@ import {
   CODE_RESP_OK,
   CODE_RESP_BAD_REQUEST,
   CODE_MESSAGE_ERROR,
-  GET_DATA_USER
+  GET_DATA_USER,
+  UPDATE_DATA_USER
 } from "../../utils/mensaje-salida.service";
 import Joi from "@hapi/joi";
 
@@ -50,6 +52,25 @@ export const PersonalInformation = (req, res) => {
     .catch(err =>
       res.status(CODE_RESP_BAD_REQUEST).json(
         mensajeSalida(CODE_MESSAGE_ERROR, GET_DATA_USER.ERROR, {
+          ...err.response.data
+        })
+      )
+    );
+};
+
+export const UpdatePerfilUser = (req, res) => {
+  const body = req.body;
+  updatePerfilUser(body)
+    .then(response =>
+      res.status(CODE_RESP_OK).json(
+        mensajeSalida(CODE_MESSAGE_OK, UPDATE_DATA_USER.SUCCESS, {
+          ...response.data
+        })
+      )
+    )
+    .catch(err =>
+      res.status(CODE_RESP_BAD_REQUEST).json(
+        mensajeSalida(CODE_MESSAGE_ERROR, UPDATE_DATA_USER.ERROR, {
           ...err.response.data
         })
       )

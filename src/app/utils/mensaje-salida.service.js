@@ -33,6 +33,10 @@ export const GET_DATA_USER = {
   SUCCESS: "Datos encontrados con éxito",
   ERROR: "Ha ocurrido un error"
 };
+export const UPDATE_DATA_USER = {
+  SUCCESS: "Datos actualizados con éxito",
+  ERROR: "Ha ocurrido un error"
+};
 
 // FUNCION
 // export const mensajeSalida = (code, message, data) =>
