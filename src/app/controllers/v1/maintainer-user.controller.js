@@ -16,7 +16,6 @@ import {
 
 export const RegisterNewUser = (req, res) => {
   const body = req.body;
-  console.log('RegisterNewUser', body);
   registerNewUser(body)
     .then(response =>
       res.status(CODE_RESP_OK).json(

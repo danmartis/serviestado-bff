@@ -45,17 +45,17 @@ describe("Test Maintainer User", () => {
     const res = await request
       .post("/bff/se-bff-empresas/v1/maintainerUser/registerNewUser")
       .send(dataNewUser);
-      expect(res.statusCode).toEqual(200);
-      expect(res.body.codigo).toEqual("OK");
-      expect(res.body.mensaje).toEqual("Datos registrados con éxito");
+    expect(res.statusCode).toEqual(200);
+    expect(res.body.codigo).toEqual("OK");
+    expect(res.body.mensaje).toEqual("Datos registrados con éxito");
   });
 
   test("Prueba registerNewUser NO OK", async () => {
     const res = await request
       .post("/bff/se-bff-empresas/v1/maintainerUser/registerNewUser")
       .send({});
-      expect(res.statusCode).toEqual(400);
-      expect(res.body.codigo).toEqual("ERROR");
-      expect(res.body.mensaje).toEqual("Ha ocurrido un error");
+    expect(res.statusCode).toEqual(400);
+    expect(res.body.codigo).toEqual("ERROR");
+    expect(res.body.mensaje).toEqual("Ha ocurrido un error");
   });
 });

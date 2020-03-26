@@ -42,6 +42,11 @@ export const UPDATE_DATA_USER = {
   ERROR: "Ha ocurrido un error"
 };
 
+export const REGISTER_NEW_USER = {
+  SUCCESS: "Datos registrados con éxito",
+  ERROR: "Ha ocurrido un error"
+};
+
 // FUNCION
 // export const mensajeSalida = (code, message, data) =>
 //     ({
