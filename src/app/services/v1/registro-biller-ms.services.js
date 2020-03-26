@@ -1,25 +1,27 @@
 import axios from "axios";
-
-const urlMS =
-  process.env.URL_MS_REGISTRO_BILLER ||
-  "http://se-ms-registrobiller/ms/se-ms-registrobiller/v1";
+import {
+  MS_REGISTROBILLER_URL,
+  MS_REGISTROBILLER_BASE,
+  MS_REGISTROBILLER_VERSION
+} from "../../../enviroment/env_config";
 
 export const sendRegistroBillerMS = dataIn => {
-  const url = `${urlMS}/registro-biller`;
+  console.log("==============", `${MS_REGISTROBILLER_URL}${MS_REGISTROBILLER_BASE}${MS_REGISTROBILLER_VERSION}/registro-biller`)
+  const url = `${MS_REGISTROBILLER_URL}${MS_REGISTROBILLER_BASE}${MS_REGISTROBILLER_VERSION}/registro-biller`;
   return axios.post(url, dataIn);
 };
 
 export const loginBillerMS = dataIn => {
-  const url = `${urlMS}/login`;
+  const url = `${MS_REGISTROBILLER_URL}${MS_REGISTROBILLER_BASE}${MS_REGISTROBILLER_VERSION}/login`;
   return axios.post(url, dataIn);
 };
 
 export const changePasswordBillerMS = dataIn => {
-  const url = `${urlMS}/login/cambio-contrasenia`;
+  const url = `${MS_REGISTROBILLER_URL}${MS_REGISTROBILLER_BASE}${MS_REGISTROBILLER_VERSION}/login/cambio-contrasenia`;
   return axios.put(url, dataIn);
 };
 
 export const recoverPasswordMS = dataIn => {
-  const url = `${urlMS}/login/recover-password`;
+  const url = `${MS_REGISTROBILLER_URL}${MS_REGISTROBILLER_BASE}${MS_REGISTROBILLER_VERSION}/login/recover-password`;
   return axios.post(url, dataIn);
 };

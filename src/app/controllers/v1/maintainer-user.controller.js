@@ -12,22 +12,12 @@ import {
   GET_DATA_USER,
   UPDATE_DATA_USER
 } from "../../utils/mensaje-salida.service";
-import Joi from "@hapi/joi";
-
-const formSchema = Joi.object({
-  name: Joi.string().required(),
-  email: Joi.string()
-    .email()
-    .required(),
-  perfil: Joi.string().required(),
-  contacto: Joi.string().required(),
-  asignar: Joi.boolean().required()
-});
+import { registerNewUserSchema } from "../../schemas/register-new-user.schema";
 
 export const RegisterNewUser = (req, res) => {
   new Promise((resolve, reject) => {
     let body = req.body;
-    const { error, value } = formSchema.validate(body);
+    const { error, value } = registerNewUserSchema.validate(body);
     if (error) {
       reject(error);
     } else {
