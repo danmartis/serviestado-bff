@@ -12,6 +12,7 @@ export const CODE_RESP_UNAUTHORIZED = 401;
 export const CODE_RESP_METHOD_NOT_ALLOWED = 405;
 export const CODE_RESP_CONFLICT = 409;
 export const CODE_RESP_INTERNAL_SERVER_ERROR = 500;
+
 // CÓDIGO MENSAJES
 export const CODE_MESSAGE_OK = "OK";
 export const CODE_MESSAGE_ERROR = "ERROR";
@@ -44,6 +45,11 @@ export const UPDATE_DATA_USER = {
 
 export const REGISTER_NEW_USER = {
   SUCCESS: "Datos registrados con éxito",
+  ERROR: "Ha ocurrido un error"
+};
+
+export const GET_REPORT = {
+  SUCCESS: "Documento generado con éxito",
   ERROR: "Ha ocurrido un error"
 };
 

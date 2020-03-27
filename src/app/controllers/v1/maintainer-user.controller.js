@@ -11,7 +11,8 @@ import {
   CODE_MESSAGE_ERROR,
   GET_DATA_USER,
   REGISTER_NEW_USER,
-  UPDATE_DATA_USER
+  UPDATE_DATA_USER,
+  GET_REPORT
 } from "../../utils/mensaje-salida.service";
 
 export const RegisterNewUser = (req, res) => {
@@ -23,7 +24,8 @@ export const RegisterNewUser = (req, res) => {
           ...response.data
         })
       )
-    ).catch(err =>
+    )
+    .catch(err =>
       res.status(CODE_RESP_BAD_REQUEST).json(
         mensajeSalida(CODE_MESSAGE_ERROR, REGISTER_NEW_USER.ERROR, {
           ...err.response.data
@@ -68,4 +70,23 @@ export const UpdatePerfilUser = (req, res) => {
         })
       )
     );
+};
+
+let path = require("path");
+
+export const ConveniosBiller = (req, res) => {
+  let filename = req.query["nameFile"] + ".pdf";
+  let filePath = path.join("./document/", filename);
+
+  res.download(filePath, filename, function(err) {
+    if (err) {
+      return res.status(err.status).json(
+        mensajeSalida(CODE_MESSAGE_ERROR, GET_REPORT.ERROR, {
+          ...err
+        })
+      );
+    } else {
+      return res.status(CODE_RESP_OK);
+    }
+  });
 };

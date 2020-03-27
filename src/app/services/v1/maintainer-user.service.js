@@ -6,8 +6,8 @@ import {
 } from "../../../enviroment/env_config";
 
 export const registerNewUser = dataIn => {
-  const url = `${MS_REGISTROBILLER_URL}${MS_REGISTROBILLER_BASE}${MS_REGISTROBILLER_VERSION}/maintainerUser/registerNewUser`;
-  return axios.post(url, data);
+  const url = `${MS_REGISTROBILLER_URL}${MS_REGISTROBILLER_BASE}${MS_REGISTROBILLER_VERSION}/maintainer-user/registerNewUser`;
+  return axios.post(url, dataIn);
 };
 
 export const personalInformation = dataIn => {
