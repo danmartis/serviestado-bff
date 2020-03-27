@@ -5,9 +5,9 @@ import app from "../../src/app";
 const request = supertest(app);
 
 const loginData = {
-  email: "entel@cliente.cl",
-  rut: "92580000-7",
-  password: "entel123"
+  email: "claudio.monasterio@telefonica.com",
+  rut: "76.124.890-1",
+  password: "movistar",
 };
 
 const loginErrorData = {
