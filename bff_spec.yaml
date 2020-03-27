@@ -109,6 +109,29 @@ paths:
             application/json:    
               schema:
                 $ref: "#/components/schemas/ApiResponseIncorrectData"
+  /maintainer-user/registerNewUser:
+    post:
+      tags:
+      - "maintainer-user"
+      summary: "Registra a un nuevo usuario"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/registerNewUser"
+      responses:
+        200:
+          description: "Datos Correctos"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseCorrectData"
+        400:
+          description: "Datos incompletos"
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/ApiResponseIncorrectData"
 components:
   schemas:
   
@@ -175,6 +198,24 @@ components:
         email:
           type: "string"
           example: "claudio.monasterio@telefonica.com"
+    registerNewUser:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Juan Perez
+        email:
+          type: string
+          example: entel@cliente.cl
+        perfil:
+          type: string
+          example: Administrador
+        asignarContacto:
+          type: boolean
+          example: true
+        tipoContacto:
+          type: string
+          example: Contacto Operacional
     ApiResponseCorrectData:
       type: "object"
       properties:
