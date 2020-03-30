@@ -74,7 +74,7 @@ export const UpdatePerfilUser = (req, res) => {
 
 let path = require("path");
 
-export const ConveniosBiller = (req, res) => {
+export const AssignedAgreements = (req, res) => {
   let filename = req.query["nameFile"] + ".pdf";
   let filePath = path.join("./document/", filename);
 

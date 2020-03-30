@@ -7,6 +7,6 @@ const router = express.Router();
 router.post("/registerNewUser", maintainerUserController.RegisterNewUser);
 router.post("/personalInformation", maintainerUserController.PersonalInformation);
 router.put("/updatePerfilUser", maintainerUserController.UpdatePerfilUser);
-router.get("/convenios/", maintainerUserController.ConveniosBiller);
+router.get("/assignedAgreements/", maintainerUserController.AssignedAgreements);
 
 export default router;
