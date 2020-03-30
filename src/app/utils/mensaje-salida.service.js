@@ -47,9 +47,12 @@ export const REGISTER_NEW_USER = {
   ERROR: "Ha ocurrido un error"
 };
 
-// FUNCION
-// export const mensajeSalida = (code, message, data) =>
-//     ({
-//         SUCCESS: { code: `${code}.000`, message, data },
-//         ERROR: { code: `${code}.001`, message, data }
-//     });
+export const GET_CONVENIOS_BILLER = {
+  SUCCESS: "Convenios obtenidos correctamente",
+  ERROR: "Ha ocurrido un error"
+}
+
+export const GET_RECAUDACION_CONVENIO = {
+  SUCCESS: "Recaudacion obtenida correctamente",
+  ERROR: "Ha ocurrido un error"
+}
