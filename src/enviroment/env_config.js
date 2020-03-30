@@ -16,3 +16,4 @@ export const MS_EMAIL_VERSION = process.env.MS_EMAIL_VERSION || 'v1';
 export const MS_RECAUDACION_URL = process.env.MS_RECAUDACION_URL || 'urlaws'
 export const MS_RECAUDACION_BASE = process.env.MS_RECAUDACION_BASE || 'ms/se-ms-recaudacion/v1/';
 export const MS_RECAUDACION_VERSION = process.env.MS_RECAUDACION_VERSION || 'v1';
+export const MS_RECAUDACION_API_URL = `${MS_RECAUDACION_URL}/${MS_RECAUDACION_BASE}/${MS_RECAUDACION_VERSION}`;

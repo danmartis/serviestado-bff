@@ -1,6 +1,12 @@
 import axios from "axios";
-import { MS_RECAUDACION_URL, MS_RECAUDACION_BASE, MS_RECAUDACION_VERSION } from "../../../enviroment/env_config";
+import { MS_RECAUDACION_API_URL } from "../../../enviroment/env_config";
 
-const url = `${MS_RECAUDACION_URL}/${MS_RECAUDACION_BASE}/${MS_RECAUDACION_VERSION}`;
+export const getConvenioByEmpresa = (rutEmpresa) => {
+  const uri = `${MS_RECAUDACION_API_URL}/convenios/${rutEmpresa}`;
+  return axios.get(uri);
+}
 
-export const 
+export const getConvenioRecaudacionByEmpresa = (rutEmpresa) => {
+  const uri = `${MS_RECAUDACION_API_URL}/convenios/recaudacion/${rutEmpresa}`;
+  return axios.get(uri);
+}
