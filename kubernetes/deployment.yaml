@@ -20,5 +20,5 @@ spec:
           image: 483819493476.dkr.ecr.us-east-1.amazonaws.com/se-bff-empresas:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
               protocol: TCP
