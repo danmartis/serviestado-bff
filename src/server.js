@@ -1,8 +1,7 @@
 import app from "./app";
-import { microservicios } from "./config/config";
+import { PORT, BASE } from "./enviroment/env_config";
 import swaggerUi from "swagger-ui-express";
 import YAML from "yamljs";
-import { base } from "./routes/index";
 import {
   CODE_RESP_NOT_FOUND,
   CODE_MESSAGE_ERROR,
@@ -13,12 +12,11 @@ import {
 import listEndpoints from "express-list-endpoints";
 
 async function main() {
-  let port = microservicios.port;
 
   //Documentación API
   const swaggerDocument = YAML.load("./bff_spec.yaml");
   app.use(
-    `${base}/api-docs`,
+    `${BASE}/api-docs`,
     swaggerUi.serve,
     swaggerUi.setup(swaggerDocument)
   );
@@ -29,8 +27,8 @@ async function main() {
       .json(mensajeSalida(CODE_MESSAGE_ERROR, MEN_PAGE_NOT_FOUND, {}));
   });
 
-  app.listen(port, () => {
-    console.log("Servidor ejecutandose en el puerto: " + port);
+  app.listen(PORT, () => {
+    console.log("Servidor ejecutandose en el puerto: " + PORT);
     console.log(listEndpoints(app));
   });
 }

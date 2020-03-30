@@ -30,6 +30,5 @@ export const registroBiller = (req, res) => {
 
 export const getBiller = (req, res) => {
   let id = req.params.id;
-  console.log("ID: ", id);
   res.status(200).json({ ok: true, biller: id });
 };
