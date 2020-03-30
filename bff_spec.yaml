@@ -104,7 +104,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/ApiResponseCorrectData"
         400:
-          description: "Datos incompletos"
+          description: "Datos incorectos"
           content:
             application/json:    
               schema:
@@ -127,6 +127,52 @@ paths:
               schema:
                 $ref: "#/components/schemas/ApiResponseCorrectData"
         400:
+          description: "Datos incorrectos"
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/ApiResponseIncorrectData"
+  /maintainer-user/personalInformation:
+    post:
+      tags:
+      - "maintainer-user"
+      summary: "Registra a un nuevo usuario"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/personalInformation"
+      responses:
+        200:
+          description: "Datos Correctos"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseCorrectData"
+        400:
+          description: "Ha ocurrido un error"
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/ApiResponseIncorrectData"
+  /maintainer-user/assignedAgreements/:
+    post:
+      tags:
+      - "maintainer-user"
+      summary: "Permite ver y descargar los convenios asignados en PDF"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/assignedAgreements"
+      responses:
+        200:
+          description: "Datos Correctos"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseCorrectData"
+        400:
           description: "Datos incompletos"
           content:
             application/json:    
@@ -134,7 +180,6 @@ paths:
                 $ref: "#/components/schemas/ApiResponseIncorrectData"
 components:
   schemas:
-  
     registroBiller:
       type: "object"
       properties:
@@ -216,6 +261,21 @@ components:
         tipoContacto:
           type: string
           example: Contacto Operacional
+    personalInformation:
+      type: object
+      properties:
+        email:
+          type: string
+          example: claudio.monasterio@telefonica.com
+        rut:
+          type: string
+          example: 76.124.890-1
+    assignedAgreements:
+      type: "object"
+      properties:
+        nameFile:
+          type: string
+          example: Deptos._Coquimb
     ApiResponseCorrectData:
       type: "object"
       properties:
