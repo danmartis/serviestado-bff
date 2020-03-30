@@ -31,7 +31,7 @@ const dataUpdateUser = {
   birthday: "12-10-1994",
   phone: "999999999",
   address: "San antonio 8666",
-  comuna: "Santiago",
+  commune: "Santiago",
   city: "Santiago"
 };
 
@@ -92,7 +92,7 @@ describe("Test Maintainer User", () => {
 
   test("ConveniosBiller NOT FOUND", async () => {
     const res = await request.get(
-      "/bff/se-bff-empresas/v1/maintainerUser/convenios/?nameFile=Error_Params"
+      "/bff/se-bff-empresas/v1/maintainerUser/assignedAgreements/?nameFile=Error_Params"
     );
     expect(res.statusCode).toEqual(CODE_RESP_NOT_FOUND);
     expect(res.body.codigo).toEqual(CODE_MESSAGE_ERROR);
@@ -101,7 +101,7 @@ describe("Test Maintainer User", () => {
 
   test("ConveniosBiller OK", async () => {
     const res = await request.get(
-      "/bff/se-bff-empresas/v1/maintainerUser/convenios/?nameFile=Deptos. Coquimbo"
+      "/bff/se-bff-empresas/v1/maintainerUser/assignedAgreements/?nameFile=Deptos._Coquimbo"
     );
     expect(res.statusCode).toEqual(CODE_RESP_OK);
   });
