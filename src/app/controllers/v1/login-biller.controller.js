@@ -3,6 +3,7 @@ import {
   changePasswordBillerMS,
   recoverPasswordMS
 } from "../../services/v1/registro-biller-ms.services";
+import { sendEmailSimpleDestinationTemplate } from "../../services/v1/email.service"
 import {
   mensajeSalida,
   CODE_MESSAGE_OK,
@@ -13,6 +14,11 @@ import {
   CHANGE_PASSWORD_RESP,
   RECOVER_PASSWORD
 } from "../../utils/mensaje-salida.service";
+import {
+  EMAIL_SOURCE_EMAIL_VERIFIED,
+  EMAIL_TEMP_NAME_CLAVE_PROVISORIA,
+  EMAIL_CONFIGURATION_NAME
+} from "../../../enviroment/env_config";
 
 export const loginBiller = (req, res) => {
   const body = req.body;
@@ -56,17 +62,25 @@ export const changePasswordBiller = (req, res) => {
 export const recoverPassword = (req, res) => {
   const body = req.body;
   recoverPasswordMS(body)
-    .then(response => {
+    .then(resRecPass => {
+      let bodyEmail = {
+        sourceEmailVerified: EMAIL_SOURCE_EMAIL_VERIFIED,
+        templateName: EMAIL_TEMP_NAME_CLAVE_PROVISORIA,
+        configurationSetName: EMAIL_CONFIGURATION_NAME,
+        toAddresses: body.email,
+        templateData: `{ "claveProvisoria":"${resRecPass.data.data.clave_provisoria}" }`
+      };
+      return sendEmailSimpleDestinationTemplate(bodyEmail);
+    }).then(resEmail => 
       res.status(CODE_RESP_OK).json(
         mensajeSalida(CODE_MESSAGE_OK, RECOVER_PASSWORD.SUCCESS, {
-          ...response.data
+          ...resEmail.data
         })
       )
-    }).catch( err => {
+    ).catch( err => {
+      let error = ( err.data )? err.data : (err.config.data)? err.config.data : {} ;
       res.status(CODE_RESP_BAD_REQUEST).json(
-        mensajeSalida(CODE_MESSAGE_ERROR, RECOVER_PASSWORD.ERROR, {
-          ...err.response.data
-        })
-      )
+        mensajeSalida(CODE_MESSAGE_ERROR, RECOVER_PASSWORD.ERROR, {error})
+      );
     })
 };
