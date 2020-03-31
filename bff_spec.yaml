@@ -14,6 +14,7 @@ servers:
 tags:
 - name: "registro-biller"
 - name: "login"
+- name: "recaudaciones"
 paths:
   /registro-biller:
     post:
@@ -178,6 +179,84 @@ paths:
             application/json:    
               schema:
                 $ref: "#/components/schemas/ApiResponseIncorrectData"
+  /convenios/{rutEmpresa}:
+    get:
+      tags:
+      - recaudaciones
+      summary: Obtiene los convenios de un biller
+      parameters:
+        - in: path
+          name: rutEmpresa
+          schema: 
+            type: string
+          required: true
+          description: Rut biller a obtener convenios
+          example: 92.580.000-7
+      responses:
+        200:
+          description: Datos Correctos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseCorrectData'
+        400:
+          description: Datos Incorrectos
+          content:
+            application/json:    
+              schema:
+                $ref: '#/components/schemas/ApiResponseIncorrectData'
+  /convenios/recaudacion/{rutEmpresa}:
+    get:
+      tags:
+      - recaudaciones
+      summary: Obtiene los convenios con su recaudacion de un biller
+      parameters:
+        - in: path
+          name: rutEmpresa
+          schema: 
+            type: string
+          required: true
+          description: Rut biller a obtener convenios
+          example: 92.580.000-7
+      responses:
+        200:
+          description: Datos Correctos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseCorrectData'
+        400:
+          description: Datos Incorrectos
+          content:
+            application/json:    
+              schema:
+                $ref: '#/components/schemas/ApiResponseIncorrectData'
+  /recaudacion/{idConvenio}:
+    get:
+      tags: 
+        - recaudaciones
+      summary: Obtiene la recaudacion de un convenio
+      parameters:
+        - in: path
+          name: idConvenio
+          schema: 
+            type: string
+          required: true
+          description: ID del convenio a obtener recaudacion
+          example: 35354534
+      responses:
+        200:
+          description: Datos Correctos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseCorrectData'
+        400:
+          description: Datos Incorrectos
+          content:
+            application/json:    
+              schema:
+                $ref: '#/components/schemas/ApiResponseIncorrectData'
 components:
   schemas:
     registroBiller:
@@ -324,3 +403,54 @@ components:
         data:
           type: "object"
           example: {}
+    ConvenioSchema:
+      type: object
+      properties:
+        rutEmpresa:
+          type: string
+          example: 92.580.000-7
+        id:
+          type: string
+          example: 35354534
+        nombre: 
+          type: string
+          example: Comunidad Edificio Viña del mar
+        tipoServicio:
+          type: string
+          example: nomina
+        numeroClientes: 
+          type: number
+          example: 200
+        rendicionInfo: 
+          type: string
+          example: 10-07-2019
+        inicioFacturacion:
+          type: string
+          example: 10-07-2019
+        finFacturacion: 
+          type: string
+          example: 20-07-2019
+    RecaudacionSchema:
+      type: object
+      properties:
+        idConvenio: 
+          type: string
+          example: 35354534,
+        totalRecaudacion:
+          type: string
+          example: 120.000.000,
+        totalRecaudado:
+          type: string
+          example: 89.130.000,
+        abonado:
+          type: string
+          example: 70.000.000,
+        consultas:
+          type: number
+          example: 250,
+        pagos: 
+          type: number
+          example: 85,
+        lastUpdate: 
+          type: string
+          example: 20-07-2020
