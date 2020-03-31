@@ -157,16 +157,19 @@ paths:
             application/json:    
               schema:
                 $ref: "#/components/schemas/ApiResponseIncorrectData"
-  /maintainer-user/assignedAgreements/:
-    post:
+  /maintainer-user/assignedAgreements/{fileName}:
+    get:
       tags:
       - "maintainer-user"
       summary: "Permite ver y descargar los convenios asignados en PDF"
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/assignedAgreements"
+      parameters:
+        - in: path
+          name: fileName
+          schema: 
+            type: string
+          required: true
+          description: Nombre del archivo
+          example: Deptos. Coquimbo
       responses:
         200:
           description: "Datos Correctos"
@@ -180,6 +183,29 @@ paths:
             application/json:    
               schema:
                 $ref: "#/components/schemas/ApiResponseIncorrectData"
+  /maintainer-user/updatePerfilUser:
+    put:
+        tags:
+        - maintainer-user
+        summary: Edita los datos del perfil del usuario
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/updatePerfilUser"
+        responses:
+          200:
+            description: Datos Correctos
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ApiResponseCorrectData'
+          400:
+            description: Datos Incorrectos
+            content:
+              application/json:    
+                schema:
+                  $ref: '#/components/schemas/ApiResponseIncorrectData'
   /maintainer-user/getUser:
     post:
       tags:
@@ -203,6 +229,29 @@ paths:
             application/json:    
               schema:
                 $ref: "#/components/schemas/ApiResponseIncorrectData"
+  /maintainer-user/updateUser:
+    put:
+        tags:
+        - maintainer-user
+        summary: Edita los datos del usuario
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/updateUser"
+        responses:
+          200:
+            description: Datos Correctos
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ApiResponseCorrectData'
+          400:
+            description: Datos Incorrectos
+            content:
+              application/json:    
+                schema:
+                  $ref: '#/components/schemas/ApiResponseIncorrectData'
   /convenios/{rutEmpresa}:
     get:
       tags:
@@ -373,18 +422,45 @@ components:
         rut:
           type: string
           example: 76.124.890-1
-    assignedAgreements:
-      type: "object"
+    updatePerfilUser:
+      type: object
       properties:
-        nameFile:
+        email:
           type: string
-          example: Deptos._Coquimb
+          example: claudio.monasterio@telefonica.com
+        rut:
+          type: string
+          example: 76.124.890-1
     listarUsuario:
       type: "object"
       properties:
         rut:
           type: "string"
           example: "rut"
+    updateUser:
+      type: object
+      properties:
+        email:
+          type: string
+          example: prueba@gmail.com
+        rut:
+          type: string
+          example: 9999999-9
+        roles:
+          type: object
+          properties:
+              id: 
+                type: string,
+                example: 2
+              role:
+                type: string
+                example: Consultor
+        contact:
+          type: string
+          example: Si
+        contactType:
+          type: string
+          example: Contacto Operacional
     ApiResponseCorrectData:
       type: "object"
       properties:
