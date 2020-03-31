@@ -15,7 +15,7 @@ import {
 const request = supertest(app);
 
 const getUserData = {
-  email: "claudio.monasterio@telefonica.com",
+  email: "pruebaemailsiigroup@yopmail.com",
   rut: "76124890-1"
 };
 
