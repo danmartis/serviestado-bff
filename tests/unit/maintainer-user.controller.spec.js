@@ -16,7 +16,7 @@ const request = supertest(app);
 
 const getUserData = {
   email: "claudio.monasterio@telefonica.com",
-  rut: "76.124.890-1"
+  rut: "76124890-1"
 };
 
 const dataNewUser = {
@@ -27,12 +27,25 @@ const dataNewUser = {
   tipoContacto: "Contacto Operacional"
 };
 
-const dataUpdateUser = {
+const dataUpdatePerfilUser = {
   birthday: "12-10-1994",
   phone: "999999999",
   address: "San antonio 8666",
   commune: "Santiago",
   city: "Santiago"
+};
+
+const dataUpdateUser = {
+  email: "claudio.monasterio@telefonica.com",
+  rut: "76124890-1",
+  roles: [
+      {
+        id: 2,
+        role: "Consultor"
+      }
+    ],
+	contact: "Si",
+  contactType: "Contacto Operacional"
 };
 
 describe("Test Maintainer User", () => {
@@ -75,7 +88,7 @@ describe("Test Maintainer User", () => {
   test("UpdatePerfilUser OK", async () => {
     const res = await request
       .put("/bff/se-bff-empresas/v1/maintainerUser/updatePerfilUser")
-      .send(dataUpdateUser);
+      .send(dataUpdatePerfilUser);
     expect(res.statusCode).toEqual(CODE_RESP_OK);
     expect(res.body.codigo).toEqual(CODE_MESSAGE_OK);
     expect(res.body.mensaje).toEqual(UPDATE_DATA_USER.SUCCESS);
@@ -122,5 +135,23 @@ describe("Test Maintainer User", () => {
     expect(res.statusCode).toEqual(CODE_RESP_BAD_REQUEST);
     expect(res.body.codigo).toEqual(CODE_MESSAGE_ERROR);
     expect(res.body.mensaje).toEqual(GET_DATA_USER.ERROR);
+  });
+
+  test("UpdateUser OK", async () => {
+    const res = await request
+      .put("/bff/se-bff-empresas/v1/maintainerUser/updateUser")
+      .send(dataUpdateUser);
+    expect(res.statusCode).toEqual(CODE_RESP_OK);
+    expect(res.body.codigo).toEqual(CODE_MESSAGE_OK);
+    expect(res.body.mensaje).toEqual(UPDATE_DATA_USER.SUCCESS);
+  });
+
+  test("UpdateUser NO OK", async () => {
+    const res = await request
+      .put("/bff/se-bff-empresas/v1/maintainerUser/updateUser")
+      .send({});
+    expect(res.statusCode).toEqual(CODE_RESP_BAD_REQUEST);
+    expect(res.body.codigo).toEqual(CODE_MESSAGE_ERROR);
+    expect(res.body.mensaje).toEqual(UPDATE_DATA_USER.ERROR);
   });
 });

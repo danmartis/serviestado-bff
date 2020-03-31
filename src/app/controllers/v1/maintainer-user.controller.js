@@ -2,6 +2,7 @@ import {
   registerNewUser,
   personalInformation,
   updatePerfilUser,
+  updateUser,
   getUser
 } from "../../services/v1/maintainer-user.service";
 import {
