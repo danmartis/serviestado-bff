@@ -39,12 +39,12 @@ const dataUpdateUser = {
   email: "claudio.monasterio@telefonica.com",
   rut: "76124890-1",
   roles: [
-      {
-        id: 2,
-        role: "Consultor"
-      }
-    ],
-	contact: "Si",
+    {
+      id: 2,
+      role: "Consultor"
+    }
+  ],
+  contact: "Si",
   contactType: "Contacto Operacional"
 };
 
