@@ -30,12 +30,12 @@ const changePasswordDataNOK = {
 };
 
 const recoverPasswordOK = {
-  email: "claudio.monasterio@telefonica.com",
+  email: "pruebaemailsiigroup@yopmail.com",
   rut: "76124890-1",
 };
 
 const recoverPasswordNOK = {
-  email: "claudio.monasterio@telefonica.cl",
+  email: "pruebaemailsiigroup@yopmail.cl",
   rut: "76124890-1",
 }
 

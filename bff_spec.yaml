@@ -345,7 +345,7 @@ components:
           example: "76124890-1"
         email:
           type: "string"
-          example: "claudio.monasterio@telefonica.com"
+          example: "pruebaemailsiigroup@yopmail.com"
     registerNewUser:
       type: object
       properties:
