@@ -1,7 +1,8 @@
 import {
   registerNewUser,
   personalInformation,
-  updatePerfilUser
+  updatePerfilUser,
+  getUser
 } from "../../services/v1/maintainer-user.service";
 import {
   mensajeSalida,
@@ -104,6 +105,25 @@ export const UpdateUser = (req, res) => {
     .catch(err =>
       res.status(CODE_RESP_BAD_REQUEST).json(
         mensajeSalida(CODE_MESSAGE_ERROR, UPDATE_DATA_USER.ERROR, {
+          ...err.response.data
+        })
+      )
+    );
+};
+
+export const GetUser = (req, res) => {
+  const body = req.body;
+  getUser(body)
+    .then(response =>
+      res.status(CODE_RESP_OK).json(
+        mensajeSalida(CODE_MESSAGE_OK, GET_DATA_USER.SUCCESS, {
+          ...response.data
+        })
+      )
+    )
+    .catch(err =>
+      res.status(CODE_RESP_BAD_REQUEST).json(
+        mensajeSalida(CODE_MESSAGE_ERROR, GET_DATA_USER.ERROR, {
           ...err.response.data
         })
       )

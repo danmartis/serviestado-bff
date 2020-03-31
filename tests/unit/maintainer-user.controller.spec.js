@@ -105,4 +105,22 @@ describe("Test Maintainer User", () => {
     );
     expect(res.statusCode).toEqual(CODE_RESP_OK);
   });
+
+  test("listar usuarios correcto", async () => {
+    const res = await request
+      .post("/bff/se-bff-empresas/v1/maintainerUser/getUser")
+      .send(getUserData.rut);
+    expect(res.statusCode).toEqual(CODE_RESP_OK);
+    expect(res.body.codigo).toEqual(CODE_MESSAGE_OK);
+    expect(res.body.mensaje).toEqual(GET_DATA_USER.SUCCESS);
+  });
+
+  test("listar usuarios incorrecto", async () => {
+    const res = await request
+      .post("/bff/se-bff-empresas/v1/maintainerUser/getUser")
+      .send({});
+    expect(res.statusCode).toEqual(CODE_RESP_BAD_REQUEST);
+    expect(res.body.codigo).toEqual(CODE_MESSAGE_ERROR);
+    expect(res.body.mensaje).toEqual(GET_DATA_USER.ERROR);
+  });
 });

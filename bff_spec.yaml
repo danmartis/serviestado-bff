@@ -15,6 +15,7 @@ tags:
 - name: "registro-biller"
 - name: "login"
 - name: "recaudaciones"
+- name: "maintainer-user"
 paths:
   /registro-biller:
     post:
@@ -175,6 +176,29 @@ paths:
                 $ref: "#/components/schemas/ApiResponseCorrectData"
         400:
           description: "Datos incompletos"
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/ApiResponseIncorrectData"
+  /maintainer-user/getUser:
+    post:
+      tags:
+      - "maintainer-user"
+      summary: "Lista usuario"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/listarUsuario"
+      responses:
+        200:
+          description: "Datos Correctos"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiResponseCorrectData"
+        400:
+          description: "Datos incorrectos"
           content:
             application/json:    
               schema:
@@ -355,6 +379,12 @@ components:
         nameFile:
           type: string
           example: Deptos._Coquimb
+    listarUsuario:
+      type: "object"
+      properties:
+        rut:
+          type: "string"
+          example: "rut"
     ApiResponseCorrectData:
       type: "object"
       properties:

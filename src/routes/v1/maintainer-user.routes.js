@@ -9,4 +9,5 @@ router.post("/personalInformation", maintainerUserController.PersonalInformation
 router.put("/updatePerfilUser", maintainerUserController.UpdatePerfilUser);
 router.get("/assignedAgreements/", maintainerUserController.AssignedAgreements);
 router.put("/updateUser", maintainerUserController.UpdateUser);
+router.post("/getUser", maintainerUserController.GetUser);
 export default router;
