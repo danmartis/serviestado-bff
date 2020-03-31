@@ -122,7 +122,7 @@ describe("Test Maintainer User", () => {
   test("listar usuarios correcto", async () => {
     const res = await request
       .post("/bff/se-bff-empresas/v1/maintainerUser/getUser")
-      .send(getUserData.rut);
+      .send(getUserData);
     expect(res.statusCode).toEqual(CODE_RESP_OK);
     expect(res.body.codigo).toEqual(CODE_MESSAGE_OK);
     expect(res.body.mensaje).toEqual(GET_DATA_USER.SUCCESS);

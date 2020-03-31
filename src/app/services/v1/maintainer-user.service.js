@@ -3,7 +3,7 @@ import { MS_REGISTROBILLER_API_URL } from "../../../enviroment/env_config";
 
 export const registerNewUser = dataIn => {
   const url = `${MS_REGISTROBILLER_API_URL}/maintainer-user/registerNewUser`;
-  return axios.post(url, data);
+  return axios.post(url, dataIn);
 };
 
 export const personalInformation = dataIn => {
