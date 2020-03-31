@@ -90,3 +90,22 @@ export const AssignedAgreements = (req, res) => {
     }
   });
 };
+
+export const UpdateUser = (req, res) => {
+  const body = req.body;
+  updateUser(body)
+    .then(response =>
+      res.status(CODE_RESP_OK).json(
+        mensajeSalida(CODE_MESSAGE_OK, UPDATE_DATA_USER.SUCCESS, {
+          ...response.data
+        })
+      )
+    )
+    .catch(err =>
+      res.status(CODE_RESP_BAD_REQUEST).json(
+        mensajeSalida(CODE_MESSAGE_ERROR, UPDATE_DATA_USER.ERROR, {
+          ...err.response.data
+        })
+      )
+    );
+};
