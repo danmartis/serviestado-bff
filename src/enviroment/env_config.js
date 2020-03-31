@@ -1,6 +1,6 @@
 export const URL = process.env.URL || 'http://se-bff-empresas';
 export const PORT = process.env.PORT || 8080;
-export const BASE = process.env.BASE || 'api';
+export const BASE = process.env.BASE || '/bff/se-bff-empresas';
 
 // INI VARIABLES DE ENTORNO
 export const EMAIL_SOURCE_EMAIL_VERIFIED = process.env.EMAIL_SOURCE_EMAIL_VERIFIED || 'michael.ordonez@siigroup.cl';
