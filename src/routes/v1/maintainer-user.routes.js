@@ -8,5 +8,5 @@ router.post("/registerNewUser", maintainerUserController.RegisterNewUser);
 router.post("/personalInformation", maintainerUserController.PersonalInformation);
 router.put("/updatePerfilUser", maintainerUserController.UpdatePerfilUser);
 router.get("/assignedAgreements/", maintainerUserController.AssignedAgreements);
-
+router.put("/updateUser", maintainerUserController.UpdateUser);
 export default router;
