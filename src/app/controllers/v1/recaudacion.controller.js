@@ -1,5 +1,5 @@
 import { getRecaudacionByConvenio } from '../../services/v1/recaudacion.service';
-import { CODE_RESP_OK, GET_RECAUDACION_CONVENIO, CODE_MESSAGE_OK, CODE_RESP_BAD_REQUEST, mensajeSalida } from '../../utils/mensaje-salida.service';
+import { CODE_RESP_OK, GET_RECAUDACION_CONVENIO, CODE_MESSAGE_ERROR, CODE_MESSAGE_OK, CODE_RESP_BAD_REQUEST, mensajeSalida } from '../../utils/mensaje-salida.service';
 
 export const getRecaudacionByConvenioController = (req, res) => {
   const idConvenio = req.params.idConvenio;
