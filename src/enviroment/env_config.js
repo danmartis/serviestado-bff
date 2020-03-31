@@ -10,6 +10,7 @@ export const EMAIL_CONFIGURATION_API_URL = `${EMAIL_SOURCE_EMAIL_VERIFIED}/${EMA
 // FIN VARIABLES DE ENTORNO
 
 // INI VARIABLES DE ENTORNO MS
+
 // REGISTRO BILLER
 export const MS_REGISTROBILLER_URL = process.env.MS_REGISTROBILLER_URL || 'http://se-ms-registrobiller';
 export const MS_REGISTROBILLER_BASE = process.env.MS_REGISTROBILLER_BASE || 'ms/se-ms-registrobiller';
@@ -21,4 +22,11 @@ export const MS_EMAIL_URL = process.env.MS_EMAIL_URL || 'http://se-ms-email';
 export const MS_EMAIL_BASE = process.env.MS_EMAIL_BASE || 'ms/se-ms-email';
 export const MS_EMAIL_VERSION = process.env.MS_EMAIL_VERSION || 'v1';
 export const MS_EMAIL_API_URL = `${MS_EMAIL_URL}/${MS_EMAIL_BASE}/${MS_EMAIL_VERSION}`;
+
+// CONVENIOS Y RECAUDACION
+export const MS_RECAUDACION_URL = process.env.MS_RECAUDACION_URL || 'urlaws'
+export const MS_RECAUDACION_BASE = process.env.MS_RECAUDACION_BASE || 'ms/se-ms-recaudacion';
+export const MS_RECAUDACION_VERSION = process.env.MS_RECAUDACION_VERSION || 'v1';
+export const MS_RECAUDACION_API_URL = `${MS_RECAUDACION_URL}/${MS_RECAUDACION_BASE}/${MS_RECAUDACION_VERSION}`;
+
 // FIN VARIABLES DE ENTORNO MS

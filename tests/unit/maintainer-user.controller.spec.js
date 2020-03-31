@@ -101,7 +101,7 @@ describe("Test Maintainer User", () => {
 
   test("ConveniosBiller OK", async () => {
     const res = await request.get(
-      "/bff/se-bff-empresas/v1/maintainerUser/assignedAgreements/?nameFile=Deptos._Coquimbo"
+      "/bff/se-bff-empresas/v1/maintainerUser/assignedAgreements/?nameFile=Deptos. Coquimbo"
     );
     expect(res.statusCode).toEqual(CODE_RESP_OK);
   });

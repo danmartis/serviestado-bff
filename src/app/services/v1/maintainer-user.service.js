@@ -15,3 +15,8 @@ export const updatePerfilUser = dataIn => {
   const url = `${MS_REGISTROBILLER_API_URL}/maintainer-user/editar-perfil`;
   return axios.put(url, dataIn);
 };
+
+export const updateUser = dataIn => {
+  const url = `${MS_REGISTROBILLER_URL}${MS_REGISTROBILLER_BASE}${MS_REGISTROBILLER_VERSION}/maintainer-user/editar-user`;
+  return axios.put(url, dataIn);
+};
