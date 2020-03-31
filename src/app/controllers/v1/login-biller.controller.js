@@ -78,9 +78,10 @@ export const recoverPassword = (req, res) => {
         })
       )
     ).catch( err => {
-      let error = ( err.data )? err.data : (err.config.data)? err.config.data : {} ;
       res.status(CODE_RESP_BAD_REQUEST).json(
-        mensajeSalida(CODE_MESSAGE_ERROR, RECOVER_PASSWORD.ERROR, {error})
+        mensajeSalida(CODE_MESSAGE_ERROR, RECOVER_PASSWORD.ERROR, {
+          ...err.response.data
+        })
       );
     })
 };
