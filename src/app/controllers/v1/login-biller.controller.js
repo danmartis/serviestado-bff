@@ -68,8 +68,9 @@ export const recoverPassword = (req, res) => {
         templateName: EMAIL_TEMP_NAME_CLAVE_PROVISORIA,
         configurationSetName: EMAIL_CONFIGURATION_NAME,
         toAddresses: body.email,
-        templateData: `{ "claveProvisoria":"${resRecPass.data.data.clave_provisoria}" }`
+        templateData: `{ "password":"${resRecPass.data.data.clave_provisoria}", "username": "${resRecPass.data.data.username}" }`
       };
+      console.log(bodyEmail)
       return sendEmailSimpleDestinationTemplate(bodyEmail);
     }).then(resEmail => 
       res.status(CODE_RESP_OK).json(
