@@ -20,11 +20,13 @@ const getUserData = {
 };
 
 const dataNewUser = {
-  name: "name",
-  email: "email@gmail.com",
-  perfil: "perfil",
-  asignarContacto: true,
-  tipoContacto: "Contacto Operacional"
+  data:{
+    name: "name",
+    email: "email@gmail.com",
+    perfil: "perfil",
+    asignarContacto: true,
+    tipoContacto: "Contacto Operacional"
+  }
 };
 
 const dataUpdatePerfilUser = {
