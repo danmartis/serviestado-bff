@@ -5,9 +5,9 @@ import app from "../../src/app";
 const request = supertest(app);
 
 const loginData = {
-  email: "claudio.monasterio@telefonica.com",
-  rut: "76.124.890-1",
-  password: "movistar",
+  email: "pruebaemailsiigroup@yopmail.com",
+  rut: "76124890-1",
+  password: "movistar"
 };
 
 const loginErrorData = {
@@ -17,7 +17,7 @@ const loginErrorData = {
 };
 
 const changePasswordData = {
-  email: "claudio.monasterio@telefonica.com",
+  email: "pruebaemailsiigroup@yopmail.com",
   rut: "76124890-1",
   oldPassword: "movistar",
   newPassword: "12345678"
@@ -31,13 +31,13 @@ const changePasswordDataNOK = {
 
 const recoverPasswordOK = {
   email: "pruebaemailsiigroup@yopmail.com",
-  rut: "76124890-1",
+  rut: "76124890-1"
 };
 
 const recoverPasswordNOK = {
   email: "pruebaemailsiigroup@yopmail.cl",
-  rut: "76124890-1",
-}
+  rut: "76124890-1"
+};
 
 describe("Test login biller", () => {
   test("Login correcto", async () => {
