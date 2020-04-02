@@ -3,11 +3,11 @@ import { MS_CMS_API_URL } from "../../../enviroment/env_config";
 
 
 
-export const sendCmsMS = dataIn => {
+export const sendCmsMSLandingBenefits = dataIn => {
 
-    const url = `${MS_CMS_API_URL}/contentFul/getSpace`;
-    console.log(url);
-    console.log(dataIn);
+    const url = `${MS_CMS_API_URL}/contentFul/getSelectField`;
+    //console.log(url);
+    //console.log(dataIn);
     return axios.post(url, dataIn);
 
 };

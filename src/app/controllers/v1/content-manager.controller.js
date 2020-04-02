@@ -3,7 +3,7 @@ import questions from "../../mock-data/help-questions.json";
 import questionDetails from "../../mock-data/help-question-details.json";
 import videos from "../../mock-data/help-videos.json";
 
-import { sendCmsMS } from "../../services/v1/content-manager.services";
+import { sendCmsMSLandingBenefits } from "../../services/v1/content-manager.services";
 import {
     mensajeSalida,
     CODE_RESP_OK,
@@ -50,14 +50,16 @@ export const controllerVideosContent = (req, res) => {
 
 // ContentFul 
 
-export const controllerLandingCF = (req, res) => {
+export const controllerLandingBenefitsCF = (req, res) => {
     const params = {
         space: req.query.space,
-        accessToken: req.query.accessToken
+        accessToken: req.query.accessToken,
+        contentTypeId: req.query.contentTypeId,
+        selectField: req.query.selectField
     };
     //console.log(params);
 
-    sendCmsMS(params)
+    sendCmsMSLandingBenefits(params)
         .then(data =>
             res.status(CODE_RESP_OK).json(
                 mensajeSalida(CODE_MESSAGE_OK, GET_CMS_CF.SUCCESS, {
