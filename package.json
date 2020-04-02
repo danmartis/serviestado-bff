@@ -1,92 +1,92 @@
 {
-  "name": "se-bff-empresas",
-  "version": "1.0.0",
-  "description": "bff empresas",
-  "artifactType": "bff",
-  "main": "src/index.js",
-  "scripts": {
-    "dev": "nodemon --exec babel-node -r dotenv/config  src/server.js",
-    "build": "babel src --out-dir dist",
-    "build-test": "npm run build && cp -a src/app/mock-data  dist/app/mock-data && npm run start",
-    "test": "jest",
-    "test-coverage": "jest --coverage",
-    "test-dev": "jest --coverage --setupFiles dotenv/config",
-    "start": "node dist/server.js",
-    "debug": "node --inspect src/app.js",
-    "lint": "eslint ./",
-    "lint:fix": "eslint ./ --fix"
-  },
-  "author": "celulas empresas <celulas empresas>",
-  "license": "UNLICENSED",
-  "dependencies": {
-    "@babel/polyfill": "^7.8.7",
-    "@babel/runtime": "^7.8.7",
-    "@hapi/joi": "^17.1.1",
-    "axios": "^0.19.2",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "express": "~4.16.4",
-    "express-async-errors": "~3.1.1",
-    "helmet": "~3.15.0",
-    "supertest": "^4.0.2",
-    "swagger-ui-express": "^4.1.4",
-    "yamljs": "^0.3.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.9.0",
-    "@babel/node": "^7.8.7",
-    "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/preset-env": "^7.9.0",
-    "ava": "^2.2.0",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.1.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^3.6.0",
-    "eslint-config-xo": "^0.25.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.2",
-    "express-list-endpoints": "^4.0.1",
-    "jest": "^25.1.0",
-    "node-mocks-http": "^1.8.1",
-    "nodemon": "^2.0.2",
-    "nyc": "^14.1.1",
-    "prettier": "^1.19.1"
-  },
-  "nyc": {
-    "check-coverage": true,
-    "lines": 90,
-    "statements": 90,
-    "branches": 90,
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ],
-    "exclude": [
-      "test/pruebasUnitarias/*.spec.js"
-    ],
-    "report-dir": "./coverage"
-  },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "node": true,
-      "mocha": true
+    "name": "se-bff-empresas",
+    "version": "1.0.0",
+    "description": "bff empresas",
+    "artifactType": "bff",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "nodemon --exec babel-node -r dotenv/config  src/server.js",
+        "build": "babel src --out-dir dist",
+        "build-test": "npm run build && cp -a src/app/mock-data  dist/app/mock-data && npm run start",
+        "test": "jest",
+        "test-coverage": "jest --coverage",
+        "test-dev": "jest --coverage --setupFiles dotenv/config",
+        "start": "node dist/server.js",
+        "debug": "node --inspect src/app.js",
+        "lint": "eslint ./",
+        "lint:fix": "eslint ./ --fix"
     },
-    "rules": {
-      "prettier/prettier": "error"
+    "author": "celulas empresas <celulas empresas>",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@babel/polyfill": "^7.8.7",
+        "@babel/runtime": "^7.8.7",
+        "@hapi/joi": "^17.1.1",
+        "axios": "^0.19.2",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "eslint-config-airbnb": "^18.1.0",
+        "express": "~4.16.4",
+        "express-async-errors": "~3.1.1",
+        "helmet": "~3.15.0",
+        "supertest": "^4.0.2",
+        "swagger-ui-express": "^4.1.4",
+        "yamljs": "^0.3.0"
     },
-    "plugins": [
-      "prettier"
-    ]
-  },
-  "jest": {
-    "testMatch": [
-      "**/tests/unit/*.spec.js"
-    ]
-  }
+    "devDependencies": {
+        "@babel/cli": "^7.8.3",
+        "@babel/core": "^7.9.0",
+        "@babel/node": "^7.8.7",
+        "@babel/plugin-transform-runtime": "^7.8.3",
+        "@babel/preset-env": "^7.9.0",
+        "ava": "^2.2.0",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^25.1.0",
+        "eslint": "^5.16.0",
+        "eslint-config-prettier": "^3.6.0",
+        "eslint-config-xo": "^0.25.1",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "express-list-endpoints": "^4.0.1",
+        "jest": "^25.1.0",
+        "node-mocks-http": "^1.8.1",
+        "nodemon": "^2.0.2",
+        "nyc": "^14.1.1",
+        "prettier": "^1.19.1"
+    },
+    "nyc": {
+        "check-coverage": true,
+        "lines": 90,
+        "statements": 90,
+        "branches": 90,
+        "reporter": [
+            "lcov",
+            "text-summary"
+        ],
+        "exclude": [
+            "test/pruebasUnitarias/*.spec.js"
+        ],
+        "report-dir": "./coverage"
+    },
+    "eslintConfig": {
+        "extends": [
+            "xo",
+            "prettier"
+        ],
+        "env": {
+            "node": true,
+            "mocha": true
+        },
+        "rules": {
+            "prettier/prettier": "error"
+        },
+        "plugins": [
+            "prettier"
+        ]
+    },
+    "jest": {
+        "testMatch": [
+            "**/tests/unit/*.spec.js"
+        ]
+    }
 }
