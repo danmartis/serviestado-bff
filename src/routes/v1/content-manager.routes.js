@@ -8,4 +8,6 @@ router.get('/questions', controllerContent.controllerQuestionsContent);
 router.get('/question-details', controllerContent.controllerQuestionDetailsContent);
 router.get('/videos', controllerContent.controllerVideosContent);
 
+router.get('/CF/landing', controllerContent.controllerLandingCF);
+
 export default router;

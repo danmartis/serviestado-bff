@@ -29,4 +29,10 @@ export const MS_RECAUDACION_BASE = process.env.MS_RECAUDACION_BASE || 'ms/se-ms-
 export const MS_RECAUDACION_VERSION = process.env.MS_RECAUDACION_VERSION || 'v1';
 export const MS_RECAUDACION_API_URL = `${MS_RECAUDACION_URL}/${MS_RECAUDACION_BASE}/${MS_RECAUDACION_VERSION}`;
 
+// CMS - CONTENT FUL
+export const MS_CMS_URL = process.env.MS_CMS_URL || 'http://localhost:3000'; //'http://se-ms-cms'
+export const MS_CMS_BASE = process.env.MS_CMS_BASE || 'ms/se-ms-cms';
+export const MS_CMS_VERSION = process.env.MS_CMS_VERSION || 'v1';
+export const MS_CMS_API_URL = `${MS_CMS_URL}/${MS_CMS_BASE}/${MS_CMS_VERSION}`;
+
 // FIN VARIABLES DE ENTORNO MS
